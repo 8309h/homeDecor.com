@@ -678,7 +678,12 @@ box-sizing: content-box;
 /* border: 2px solid red; */
 text-align: right;
 
+} #media>h2{
+    padding-left: 30px;
 }
+
+
+
 #footer-one>ul>li>div:nth-child(1) img{
     width: 40%;
 }
@@ -698,6 +703,7 @@ padding-right: 30px;
 
 
 }
+
 #footer-one>ul h2{
     font-size: 14px;
     margin: 0;
@@ -731,6 +737,9 @@ padding-right: 30px;
     line-height: 24px;
     letter-spacing: 1px;
     height: 2cm;
+}
+a{
+    color:rgba(255, 255, 255, 0.84) ;
 }
 #pop-div button{
     font-size: 16px;
