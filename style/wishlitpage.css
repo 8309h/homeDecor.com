@@ -351,3 +351,42 @@ font-size: large;
     align-items: center;
     margin-left: auto;
 }
+
+/* Mid-Part */
+
+#Mid-Part {
+    display: flex;
+    /* border: 1px solid blue; */
+    justify-content: center;
+}
+
+#Mid-Part > div{
+    width: 80%;
+    /* border: 1px solid red; */
+}
+
+#Mid-Part > div > hr{
+    width: 100%;
+}
+
+#title > h1{
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 34px;
+    margin: 15px 0px 30px 0px;
+}
+
+#site-Path > ul {
+    display: flex;
+    /* border: 1px solid red; */
+    justify-content: space-between;
+    width: 150px;
+    margin: 10px 0px 10px 0px;
+    color: #666; 
+}
+
+/* #card-container{
+    display: flex;
+    border: 1px solid green;
+    justify-content: center;
+} */
