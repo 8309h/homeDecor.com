@@ -351,3 +351,17 @@ font-size: large;
     align-items: center;
     margin-left: auto;
 }
+
+
+.furniture-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto;
+     gap: 20px;
+}
+.furniture-container>div{
+   /* border: 1px solid black; */
+
+   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
