@@ -13,12 +13,10 @@ let furnitureData=document.querySelector(".furniture-container")
 // furnitureData.style.width="90%"
 // furnitureData.style.margin="auto"
 // furnitureData.style.marginTop="30px"
-
-
-
-
-
 // FURNITURE DATA 
+
+let wishListData=[]
+let ADDtoCartData=[]
 let furniture=[
 //     {
 //         "ProductId":1,
@@ -528,7 +526,7 @@ let furniture=[
 
 ]
 
-localStorage.setItem("Addtocart",JSON.stringify(furniture))
+localStorage.setItem("furniture",JSON.stringify(furniture))
 
 
 function displayData(data){
@@ -549,11 +547,21 @@ function displayData(data){
         let buynow=document.createElement("button")
         buynow.textContent="Add To Cart"
         buynow.style.marginLeft=""
+
+        buynow.addEventListener("click",function(){
+
+            let temp=el
+            ADDtoCartData.push(temp)
+            localStorage.setItem("Add To Cart",JSON.stringify(ADDtoCartData))
+        })
               
         let but=document.createElement("i")
         but.setAttribute("id","heartss")
        // but.textContent="♡"
       but.setAttribute("class","fa fa-heart")
+      localStorage.setItem("wishlist",JSON.stringify(wishListData))
+        })
+
         div.append(image,name,price,desc,buynow,but)
 
         furnitureData.append(div);
