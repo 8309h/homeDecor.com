@@ -18,7 +18,7 @@ body{
     min-height: auto;
     border-bottom: none;
     display: flex;
-    -webkit-box-pack: justify;
+  
     justify-content: space-between;
     align-items: center;
     box-sizing: border-box;
@@ -79,6 +79,13 @@ width: 400px;
     width: 90%; 
     
     padding: 0px 40px;
+
+}
+
+#logo-container img{
+    width: 50%; 
+    
+    padding: 0px 120px;
 
 }
 
@@ -181,19 +188,14 @@ justify-content: space-between;
 }
 #two-nav{
     display: flex;
-    /* -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row; */
     flex-direction: row;
     margin: 0 auto;
     padding: 0 32px;
     width: 100%;
     max-width: 1680px;
     background: unset;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     list-style-type: none;
-    /* border: 1px solid red; */
     background-color: #222;
 }
 #two-nav li{
@@ -250,7 +252,7 @@ img{
 }
 #landpage-text{
     position: absolute;
-    top: 5%;
+    top: 1%;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
@@ -275,7 +277,7 @@ img{
     font-variant: normal;
     text-transform: none;
     text-decoration: inherit;
-    -webkit-font-smoothing: antialiased;
+   
 }
 #landpage-text-2{
  display: flex;
@@ -571,7 +573,7 @@ position: relative;
     position: absolute;
     left: 50%;
     top: auto;
-    -webkit-transform: translateX(-50%);
+    text-align: left;
     transform: translateX(-50%);
     /* transform: translateX(0%); */
     z-index: 504;
@@ -583,14 +585,15 @@ position: relative;
     text-align: left;
     display: flex;
     min-height: 400px;
-
-    /* position: relative; */
     margin-top: 42px;
     display: none;
  }
 #furniture-container-mouseover:hover{
     /* text-decoration: underline; */
   border-bottom: 2px solid  white;
+}
+#furniture-container li{
+    text-align: left;
 }
 
 
@@ -787,7 +790,7 @@ box{
 box-sizing: border-box;
     position: relative;
      display: flex;
-    -webkit-box-align: center;
+   
     align-items: center;
 }
 box img{
@@ -797,9 +800,9 @@ box img{
     height: 50%;
     padding:10px;
     display: inline-flex;
-    -webkit-box-pack: center;
+   
     justify-content: center;
-    -webkit-box-align: center;
+    
     align-items: center;
     background: 0 0;
     border: 0;
@@ -816,8 +819,7 @@ box img{
 #nav-ones ul li{
     display: inline-flex;
     display: flex;
-    -webkit-box-align: center;
-    
+   
     align-items: center;
     margin: 0;
     padding: 0;
@@ -845,10 +847,113 @@ font-size: large;
 
 #nav-ones>div>div{
     display: inline-flex;
-    -webkit-box-align: center;
+    
     align-items: center;
     margin-left: auto;
 }
+
 #bold-wl{
     font-weight: bold;
 }
+
+
+#nav-media{
+    /* border-bottom: 1px solid #ccc; */
+    position: relative;
+    top:0;
+    left: 0;
+    height: 1.8cm;
+    background-color:white;
+    display: none;
+}
+#nav-media>div{
+    box-sizing: border-box;
+    max-width: 1680px;
+    margin: 0 auto;
+    padding: 0px 20px 10px 0 px;
+    display: flex;
+    /* display: inline-flex; */
+    width: 100%;
+    justify-content: space-between;
+   
+}
+#nav-media i{
+    font-size: 26px;
+    margin: 30px;
+}
+#nav-media-img{
+    position: relative;
+    top: 0;
+    left: 150px;
+    right: -50px;
+   
+}
+#nav-media-img img{
+    width: 50%;
+}
+#nav-media-user-cart{
+    display: flex;
+    justify-content: space-between;
+    /* width: 50px; */
+    margin-right: 20px;
+}
+
+#media-search{
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    background-color: #F5F5F5;
+    border: 1px solid red;
+    height: 1.3cm;
+    display: none;
+}
+
+#media-search form{
+   width: 98%;
+   margin: auto;
+   padding: 5px;
+}
+
+
+#media-search input{
+    width: 95%;
+    margin: auto;
+    height: 1cm;
+
+}
+#media-search input::placeholder{
+    font-size: larger;
+    font-weight: 600;
+    margin-left:6px ;
+    
+}
+
+#media-search input:click{
+border: double black;
+}
+#media-search form i{
+    font-size: 18px;
+    margin: 2mm;
+
+}
+
+
+
+
+@media (min-width: 200px) and (max-width: 800px) {
+    #nav-media,#media-search{
+        display: block;
+    }
+    #nav-ones,#head-core,#one-nav,#two-nav{
+        display: none;
+    }
+ #tag-4-5{
+    flex-direction: column;
+ }
+ #tag-4-container,#tag-5-container{
+    width: 100%;
+ }
+
+  }
+
