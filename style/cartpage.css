@@ -352,5 +352,99 @@ font-size: large;
     margin-left: auto;
 }
 
+#media-search{
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    background-color: #F5F5F5;
+    border: 1px solid red;
+    height: 1.3cm;
+    display: none;
+}
+
+#media-search form{
+   width: 98%;
+   margin: auto;
+   padding: 5px;
+}
+
+
+#media-search input{
+    width: 95%;
+    margin: auto;
+    height: 1cm;
+
+}
+#media-search input::placeholder{
+    font-size: larger;
+    font-weight: 600;
+    margin-left:6px ;
+    
+}
+
+#media-search input:click{
+border: double black;
+}
+#media-search form i{
+    font-size: 18px;
+    margin: 2mm;
+
+}
+
+#nav-media{
+     border-bottom: 1px solid #ccc; 
+    position: relative;
+    top:0;
+    left: 0;
+    height: 2.1cm;
+    background-color:white;
+    display: none;
+}
+#nav-media>div{
+    box-sizing: border-box;
+    max-width: 1680px;
+    margin: 0 auto;
+    padding: 0px 20px 10px 0 px;
+    display: flex;
+    /* display: inline-flex; */
+    width: 100%;
+    justify-content: space-between;
+   
+}
+#nav-media i{
+    font-size: 26px;
+    margin: 30px;
+}
+#nav-media-img{
+    position: relative;
+    top: 0;
+    left: 150px;
+    right: -50px;
+}
+#nav-media-img img{
+    width: 50%;
+background-color: transparent;
+}
+#nav-media-user-cart{
+    display: flex;
+    justify-content: space-between;
+    /* width: 50px; */
+    margin-right: 20px;
+}
+
+
+
+
+@media (min-width: 200px) and (max-width: 800px) {
+    #nav-media{
+        display: block;
+    }
+    #nav-ones,#head-core,#one-nav,#two-nav{
+        display: none;
+    }
+
+
+  }
 
 
