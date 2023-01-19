@@ -2,45 +2,42 @@
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
+
 }
 
 body {
     margin: auto;
+
 }
 
 form {
-    width: 400px;
-    background-color: white;
+    width: 30%;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     margin: 0px auto;
     padding: 30px;
-    background-image: url("./images/apana.digital.png");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-   
-    color: white;
     font-size: bolder;
     margin-bottom: 30px;
-    margin-top: 30px;
-
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    border: 2px solid rgb(34, 4, 84);
 }
 
 h2 {
     font-size: 30px;
-
+    margin-bottom: 30px;
 }
 
 h3 {
     text-align: center;
     margin-top: 30px;
-    color: black;
+    color: white;
+    font-weight: bold;
 }
 
 p {
     text-align: center;
     margin-top: 20px;
-    color: black;
-    font-weight: bold;
 }
 
 input {
@@ -53,7 +50,7 @@ input {
     border: 1px solid #ccc;
     box-sizing: border-box;
     resize: vertical;
-
+   
 }
 
 input[type="submit"]:hover {
@@ -62,8 +59,12 @@ input[type="submit"]:hover {
     font-size: 20px;
     cursor: pointer;
 }
-input[type="checkbox"]{
+#logo{
+    width: 35%;
+    margin: auto;
     
-    padding: 5px;
-    text-align: start;
+}
+#logo img{
+    width: 100%;
+   
 }

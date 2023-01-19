@@ -6,6 +6,13 @@ displayProducts(cartData);
 
 function displayProducts(data) {
 
+
+//     let 
+// }
+let logeduser = JSON.parse(localStorage.getItem("loggedUser")) || [];
+console.log(logeduser)
+document.querySelector("#welcome").textContent = logeduser.name;
+
     container.innerHTML = null;
 
     let myData = data.forEach((element, index) => {
@@ -107,3 +114,4 @@ function displayProducts(data) {
 
     // console.log(myData)
 }
+

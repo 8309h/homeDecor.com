@@ -9,6 +9,9 @@ body {
     color: #222;
     font-family: var(--webfont-primary, sans-serif);
 }
+#bold-wl{
+    font-weight: bold;
+}
 
 ul {
     margin: 0;
