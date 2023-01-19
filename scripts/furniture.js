@@ -13,11 +13,6 @@ let furnitureData=document.querySelector(".furniture-container")
 // furnitureData.style.width="90%"
 // furnitureData.style.margin="auto"
 // furnitureData.style.marginTop="30px"
-
-
-
-
-
 // FURNITURE DATA 
 
 let wishListData=[]
