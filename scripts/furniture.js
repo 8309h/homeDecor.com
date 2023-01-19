@@ -19,6 +19,9 @@ let furnitureData=document.querySelector(".furniture-container")
 
 
 // FURNITURE DATA 
+
+let wishListData=[]
+let ADDtoCartData=[]
 let furniture=[
     {
         "ProductId":1,
@@ -528,7 +531,7 @@ let furniture=[
 
 ]
 
-localStorage.setItem("Addtocart",JSON.stringify(furniture))
+localStorage.setItem("furniture",JSON.stringify(furniture))
 
 
 function displayData(data){
@@ -549,6 +552,13 @@ function displayData(data){
         let buynow=document.createElement("button")
         buynow.textContent="Add To Cart"
         buynow.style.marginLeft=""
+
+        buynow.addEventListener("click",function(){
+
+            let temp=el
+            ADDtoCartData.push(temp)
+            localStorage.setItem("Add To Cart",JSON.stringify(ADDtoCartData))
+        })
               
         let but=document.createElement("button")
         but.textContent="♡"
@@ -559,6 +569,14 @@ function displayData(data){
         but.style.fontSize="20 px"
         but.style.backgroundColor="white"
         but.style.fontWeight="bold"
+        but.addEventListener("click",function(){
+        let temp=el
+         wishListData.push(temp);
+
+            
+
+            localStorage.setItem("wishlist",JSON.stringify(wishListData))
+        })
 
         div.append(image,name,price,desc,buynow,but)
 
