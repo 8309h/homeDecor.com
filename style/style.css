@@ -82,6 +82,13 @@ width: 400px;
 
 }
 
+#logo-container img{
+    width: 50%; 
+    
+    padding: 0px 120px;
+
+}
+
 #head-core-right{
     position: relative;
     display: flex;
@@ -245,7 +252,7 @@ img{
 }
 #landpage-text{
     position: absolute;
-    top: 5%;
+    top: 1%;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
