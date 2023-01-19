@@ -112,14 +112,14 @@ display: flex;
 justify-content: space-between;
 
 }
-#head-core-right span{
+ #head-core-right span{
     font-size: 18px;
     margin: 1mm;
     box-sizing: content-box;
 } 
 #ordersign-in-text{
     margin-top: 2mm;
-}
+}  
 
 
 #one-nav{
@@ -848,4 +848,7 @@ font-size: large;
     -webkit-box-align: center;
     align-items: center;
     margin-left: auto;
+}
+#bold-wl{
+    font-weight: bold;
 }

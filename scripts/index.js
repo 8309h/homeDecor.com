@@ -1,3 +1,6 @@
+let logeduser = JSON.parse(localStorage.getItem("loggedUser")) || [];
+console.log(logeduser)
+document.querySelector("#welcome").textContent = logeduser.name;
 
 let furnitureContainer=document.getElementById("furniture-container")
  let furnitureContainermouseover=document.getElementById("furniture-container-mouseover")

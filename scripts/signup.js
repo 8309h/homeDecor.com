@@ -22,14 +22,14 @@ function myfun(event) {
             }
             details_arr.push(details_obj)
             localStorage.setItem("details", JSON.stringify(details_arr))
-            alert("sign up successful👍")
+            alert("sign-up successful👍")
             form.reset();
-            window.location.assign("./login.html");
+            window.location.assign("./signin.html");
         }
 
     }
     else {
-        alert("Please fill Deteils")
+        alert("Please fill Details first")
     }
 };
 
