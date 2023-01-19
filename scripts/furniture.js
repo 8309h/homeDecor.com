@@ -18,6 +18,7 @@ let furnitureData=document.querySelector(".furniture-container")
 
 
 
+
 // FURNITURE DATA 
 let furniture=[
     {
@@ -532,6 +533,7 @@ localStorage.setItem("Addtocart",JSON.stringify(furniture))
 
 
 function displayData(data){
+    furnitureData.innerHTML=""
     data.forEach(function(el){
 
         let div=document.createElement("div")
