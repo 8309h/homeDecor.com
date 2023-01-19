@@ -18,15 +18,15 @@ let furnitureData=document.querySelector(".furniture-container")
 let wishListData=[]
 let ADDtoCartData=[]
 let furniture=[
-    {
-        "ProductId":1,
-        "Name":"Teak Extendable Dining Table",
-        "Category":"Table",
-        "Image":"https://cb.scene7.com/is/image/Crate/LakinExtDiningTable3QSSS20_1x1/$web_pdp_main_carousel_med$/200402124905/lakin-81-recycled-teak-extendable-dining-table.jpg",
-        "Price":20000,
-        "Description":"Good in quality and highle sold product"
+//     {
+//         "ProductId":1,
+//         "Name":"Teak Extendable Dining Table",
+//         "Category":"Table",
+//         "Image":"https://cb.scene7.com/is/image/Crate/LakinExtDiningTable3QSSS20_1x1/$web_pdp_main_carousel_med$/200402124905/lakin-81-recycled-teak-extendable-dining-table.jpg",
+//         "Price":20000,
+//         "Description":"Good in quality and highle sold product"
           
-   },
+//    },
    {
        "ProductId":2,
        "Name":"Eaves 86 Rectangular Dining Table",
@@ -538,7 +538,7 @@ function displayData(data){
         let name=document.createElement("h3")
         name.textContent=el.Name;
         let price=document.createElement("h5")
-        price.textContent=el.Price
+        price.textContent= "₹ "+el.Price
         let desc=document.createElement("p")
         desc.textContent=el.Description
  
@@ -555,22 +555,11 @@ function displayData(data){
             localStorage.setItem("Add To Cart",JSON.stringify(ADDtoCartData))
         })
               
-        let but=document.createElement("button")
-        but.textContent="♡"
-        but.style.padding="0"
-        but.style.border='none'
-        but.style.fontSize="20px"
-        but.style.color="red"
-        but.style.fontSize="20 px"
-        but.style.backgroundColor="white"
-        but.style.fontWeight="bold"
-        but.addEventListener("click",function(){
-        let temp=el
-         wishListData.push(temp);
-
-            
-
-            localStorage.setItem("wishlist",JSON.stringify(wishListData))
+        let but=document.createElement("i")
+        but.setAttribute("id","heartss")
+       // but.textContent="♡"
+      but.setAttribute("class","fa fa-heart")
+      localStorage.setItem("wishlist",JSON.stringify(wishListData))
         })
 
         div.append(image,name,price,desc,buynow,but)

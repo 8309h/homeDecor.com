@@ -86,8 +86,7 @@ img{
 }
 
 #one-nav>div span:hover{
-    /* transform: scaleX(1); */
-    /* transform-origin: bottom left; */
+  
     border-bottom: 3px solid #222;
 }
 #one-nav a{
@@ -111,16 +110,14 @@ img{
 }
 #two-nav{
     display: flex;
-    /* -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row; */
+ 
     flex-direction: row;
     margin: 0 auto;
     padding: 0 32px;
     width: 100%;
     max-width: 1680px;
     background: unset;
-    -webkit-box-sizing: border-box;
+   
     box-sizing: border-box;
     list-style-type: none;
     /* border: 1px solid red; */
@@ -157,7 +154,7 @@ img{
     min-height: auto;
     border-bottom: none;
     display: flex;
-    -webkit-box-pack: justify;
+  
     justify-content: space-between;
     align-items: center;
     box-sizing: border-box;
@@ -187,7 +184,7 @@ img{
     color: #666;
     padding: 10px 48px 10px 16px;
     line-height: 20px;
-    -webkit-box-sizing: border-box;
+   
     box-sizing: border-box;
     border-radius: 0;
     border: 1px solid #666;
@@ -289,7 +286,7 @@ box{
 box-sizing: border-box;
     position: relative;
      display: flex;
-    -webkit-box-align: center;
+   
     align-items: center;
 }
 box img{
@@ -299,9 +296,9 @@ box img{
     height: 50%;
     padding:10px;
     display: inline-flex;
-    -webkit-box-pack: center;
+   
     justify-content: center;
-    -webkit-box-align: center;
+   
     align-items: center;
     background: 0 0;
     border: 0;
@@ -318,7 +315,7 @@ box img{
 #nav-ones ul li{
     display: inline-flex;
     display: flex;
-    -webkit-box-align: center;
+  
     
     align-items: center;
     margin: 0;
@@ -347,7 +344,6 @@ font-size: large;
 
 #nav-ones>div>div{
     display: inline-flex;
-    -webkit-box-align: center;
     align-items: center;
     margin-left: auto;
 }
@@ -355,13 +351,155 @@ font-size: large;
 
 .furniture-container{
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    width: 96%;
+    margin: auto;
+    grid-template-columns: repeat(4,1fr);
     grid-template-rows: auto;
      gap: 20px;
 }
 .furniture-container>div{
    /* border: 1px solid black; */
 
-   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+   box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
 }
 
+#item-heading{
+    margin: 30px 0px 10px 0px;
+    width: 300px;
+    font-size: larger;
+    display: flex;
+    
+    /* border: 2px solid red; */
+}
+#item-heading h3{
+    font-size: 30px;
+    margin :  15px;
+    margin-right: 6px;
+}
+#item-heading span{
+    font-size: 14px;
+    margin: 10px;
+  font-weight: 400;
+  text-decoration: underline;
+}
+#heartss{
+    font-size: 33px;
+    background-color: transparent;
+    border: 0;
+    position: relative;
+    top: -450px;
+    right:-130px;
+    color: #666;
+}
+#heartss:hover{
+    color: red;
+    transform: scale(1.1);
+}
+button{
+    border: 0;
+    margin: 10px;
+    font-size: larger;
+    border-radius: 5px;
+    background-color: #EEEEEE;
+    padding: 10px;
+    font-weight: 530;
+}
+button:hover{
+    zoom: 1.05;
+    background-color: #E0E0E0;
+}
+
+
+#nav-media{
+     border-bottom: 1px solid #ccc; 
+    position: relative;
+    top:0;
+    left: 0;
+    height: 2.1cm;
+    background-color:white;
+    display: none;
+}
+#nav-media>div{
+    box-sizing: border-box;
+    max-width: 1680px;
+    margin: 0 auto;
+    padding: 0px 20px 10px 0 px;
+    display: flex;
+    /* display: inline-flex; */
+    width: 100%;
+    justify-content: space-between;
+   
+}
+#nav-media i{
+    font-size: 26px;
+    margin: 30px;
+}
+#nav-media-img{
+    position: relative;
+    top: 0;
+    left: 150px;
+    right: -50px;
+   
+}
+#nav-media-img img{
+    width: 50%;
+}
+#nav-media-user-cart{
+    display: flex;
+    justify-content: space-between;
+    /* width: 50px; */
+    margin-right: 20px;
+}
+
+
+#media-search{
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    background-color: #F5F5F5;
+    border: 1px solid red;
+    height: 1.3cm;
+    display: none;
+}
+
+#media-search form{
+   width: 98%;
+   margin: auto;
+   padding: 5px;
+}
+
+
+#media-search input{
+    width: 95%;
+    margin: auto;
+    height: 1cm;
+
+}
+#media-search input::placeholder{
+    font-size: larger;
+    font-weight: 600;
+    margin-left:6px ;
+    
+}
+
+#media-search input:click{
+border: double black;
+}
+#media-search form i{
+    font-size: 18px;
+    margin: 2mm;
+
+}
+
+
+@media (min-width: 200px) and (max-width: 800px) {
+    #nav-media{
+        display: block;
+    }
+    #nav-ones,#head-core,#one-nav,#two-nav{
+        display: none;
+    }
+
+
+  }
