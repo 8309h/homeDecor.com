@@ -1,31 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign-in</title>
-    <link rel="stylesheet" href="style/signin.css">
-
+    <title>login</title>
+    <link rel="stylesheet" href="./style/signin.css">
+   
 </head>
+
 <body>
-    <div id="logo">
-        <img src="https://www.bing.com/images/blob?bcid=Sz1DEV1dmyMFuw" alt="">
+    <div id="input">
+        <form>
+            <h2>Login🤝</h2>
+            <label>E-mail</label><br>
+            <input id="email" type="email" placeholder="Enter your email"><br>
+            <label for="pwd">Password</label><br>
+            <input type="password" id="password" name="pwd" minlength="4" placeholder="Enter password">
+            
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam blanditiis recusan</p>
+            <input id="butt" type="submit" value="Login ">
+            <h3> Do not have an account? <a href="signup.html">Sign-up</a></h3>
+        </form>
     </div>
-    <form>
-        <h2>New User🙏</h2>
-        <label>Full Name</label><br>
-        <input id="name" type="text" placeholder="Enter your name"><br>
-        <label>E-mail</label><br>
-        <input id="email" type="email" placeholder="Enter your email"><br>
-        <label for="pwd">Password</label><br>
-        <input type="password" id="password" name="pwd" minlength="4" placeholder="Enter password">
-        <p>Welcome to our side and expends your ideas with us</p>
-        <a href="login.html"><input id="butt" type="submit" value="SIGN UP"></a>
-        <h3>Already have an account? <a href="login.html">Log in</a></h3>
-    </form>
-    
-    
 </body>
+
 </html>
-<script src="scripts/signin.js"></script>
+<script>
+    
+    let details_arr = JSON.parse(localStorage.getItem("details")) || []
+    let form = document.querySelector('form')
+    form.addEventListener('submit', myfun)
+    function myfun(event) {
+        event.preventDefault();
+        let email = document.querySelector('#email').value;
+        let password = document.querySelector('#password').value;
+        if (email !== "" && password !== "") {
+            let flag_email = "No";
+            let pass = "";
+            let temp;
+
+            for (let i = 0; i < details_arr.length; i++) {
+                if (email == details_arr[i].email) {
+
+                    flag_email = "yes";
+                    pass = details_arr[i].password;
+
+                    temp = details_arr[i];
+                    localStorage.setItem("loggedUser", JSON.stringify(details_arr[i]));
+
+
+                }
+                console.log(details_arr[i]);
+            }
+
+            if (flag_email == "yes" && pass == password) {
+
+                location.href = "payment.html";
+                form.reload();
+            } else {
+                alert("Invalid Email or Password ")
+            }
+        } else {
+            alert("please fill the valid details")
+        }
+    }
+</script>
