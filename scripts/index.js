@@ -22,9 +22,9 @@ let furnitureContainer=document.getElementById("furniture-container")
   }, 5000);
 
 })
-kitchenContainermouseover.addEventListener("mouseleave",()=>{
-    kitchenContainer.style.display="none"
-})
+// kitchenContainermouseover.addEventListener("mouseleave",()=>{
+//     kitchenContainer.style.display="none"
+// })
 
 
 furnitureContainermouseover.addEventListener("mouseover",(e)=>{
@@ -34,9 +34,9 @@ furnitureContainermouseover.addEventListener("mouseover",(e)=>{
       }, 5000);
 
 })
-furnitureContainermouseover.addEventListener("mouseout",()=>{
-    furnitureContainer.style.display="none"
-})
+// furnitureContainermouseover.addEventListener("mouseout",()=>{
+//     furnitureContainer.style.display="none"
+// })
 
 let popdiv=document.getElementById("pop-div")
 popdiv.addEventListener("click",removepopup)

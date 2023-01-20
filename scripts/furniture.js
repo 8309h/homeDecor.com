@@ -569,12 +569,18 @@ function displayData(data){
        // but.textContent="♡"
       but.setAttribute("class","fa fa-heart")
       localStorage.setItem("wishlist",JSON.stringify(wishListData))
-        })
+        
 
         div.append(image,name,price,desc,buynow,but)
 
         furnitureData.append(div);
+
     
-}
+
+
+    })
+    }
+
+
 
 displayData(furniture);

@@ -576,6 +576,12 @@ padding-right: 30px;
     text-align: left;
 }
 
+#footer-one>ul a{
+    color: #fff;
+    
+    
+    }
+
 #footer-one>ul span{
     display: block;
     font-size: 12px;
