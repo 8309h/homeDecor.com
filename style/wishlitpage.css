@@ -224,7 +224,9 @@ img {
     right: 0;
     color: #666;
 }
-
+a{
+    color:rgba(255, 255, 255, 0.84) ;
+}
 #logo-container {
     width: 400px;
     /* border: 1px solid red; */
@@ -413,14 +415,7 @@ box img {
     color: #666;
 }
 
-#card-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    width: 80%;
-    margin: auto;
-    gap: 20px;
-    /* border: 1px solid red; */
-}
+
 
 /* img{
     width: 100%;
@@ -520,6 +515,7 @@ footer{
     font-family: var(--webfont-primary, sans-serif);
     background: #333;
     clear: both;
+    margin-top: 50px;
 }
 
 #footer-one{
@@ -604,6 +600,21 @@ padding-right: 30px;
     text-align: left;
 
 }
+
+#card-container >div{
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+}
+#card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 96%;
+    margin: auto;
+    gap: 20px;
+    /* border: 1px solid red; */
+}
+
+
+
 
 
 @media (min-width: 200px) and (max-width: 800px) {

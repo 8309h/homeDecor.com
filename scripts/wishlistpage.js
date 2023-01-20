@@ -33,36 +33,7 @@ document.querySelector("#welcome").textContent = logeduser.name;
         let desc = document.createElement("p");
         desc.textContent = element.Description;
 
-        // let increment = document.createElement("button");
-        // increment.innerText = "+";
-
-        // increment.addEventListener("click", () => {
-        //     // if(+data[index].quantity<100){
-        //         data[index].quantity = parseInt(element.quantity) + 1;
-        //         localStorage.setItem("wishlist", JSON.stringify(data));
-
-        //         displayProducts(data);
-        //     // }
-        // });
-
-        // let quantity = document.createElement("span");
-        // if(element.quantity == undefined || element.quantity == null)
-        // element.quantity = 1;
-        // quantity.innerText = element.quantity;
-
-        // let decrement = document.createElement("button");
-        // decrement.innerText = "-";
-
-        // decrement.addEventListener("click", () => {
-        //     if(data[index].quantity>1){
-        //         data[index].quantity = parseInt(element.quantity)-1;
-        //         localStorage.setItem("wishlist",JSON.stringify(data));
-
-        //         displayProducts(data);
-        //     }
-        // });
-
-        // let ADDtoCartData = [];
+      
 
         let addtocart = document.createElement("button");
         addtocart.innerText = "ADD TO CART"
