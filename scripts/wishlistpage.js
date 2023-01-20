@@ -9,6 +9,8 @@ function displayProducts(data) {
 
 //     let 
 // }
+
+
 let logeduser = JSON.parse(localStorage.getItem("loggedUser")) || [];
 console.log(logeduser)
 document.querySelector("#welcome").textContent = logeduser.name;
@@ -114,4 +116,5 @@ document.querySelector("#welcome").textContent = logeduser.name;
 
     // console.log(myData)
 }
+
 

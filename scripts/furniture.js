@@ -13,6 +13,14 @@ let furnitureData=document.querySelector(".furniture-container")
 // furnitureData.style.width="90%"
 // furnitureData.style.margin="auto"
 // furnitureData.style.marginTop="30px"
+
+
+
+
+
+
+
+
 // FURNITURE DATA 
 
 let wishListData=[]
@@ -530,6 +538,7 @@ localStorage.setItem("furniture",JSON.stringify(furniture))
 
 
 function displayData(data){
+    furnitureData.innerHTML=""
     data.forEach(function(el){
 
         let div=document.createElement("div")
