@@ -34,9 +34,10 @@ furnitureContainermouseover.addEventListener("mouseover",(e)=>{
       }, 5000);
 
 })
-// furnitureContainermouseover.addEventListener("mouseout",()=>{
-//     furnitureContainer.style.display="none"
-// })
+furnitureContainermouseover.addEventListener("mouseleave",()=>{
+    furnitureContainer.style.display="none"
+})
+
 
 let popdiv=document.getElementById("pop-div")
 popdiv.addEventListener("click",removepopup)
