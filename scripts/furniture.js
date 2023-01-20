@@ -574,7 +574,7 @@ function displayData(data){
         div.append(image,name,price,desc,buynow,but)
 
         furnitureData.append(div);
-    })
+    
 }
 
 displayData(furniture);
