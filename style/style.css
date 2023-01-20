@@ -798,6 +798,7 @@ footer{
     font-family: var(--webfont-primary, sans-serif);
     background: #333;
     clear: both;
+    margin-top: 50px;
 }
 
 #footer-one{
