@@ -10,6 +10,9 @@ body{
     color: #222;
     font-family: var(--webfont-primary, sans-serif);
 }
+#bold-wl{
+    font-weight: bold;
+}
 
 ul{
     margin: 0;
@@ -355,7 +358,7 @@ font-size: large;
     margin: auto;
     grid-template-columns: repeat(4,1fr);
     grid-template-rows: auto;
-     gap: 20px;
+    gap: 20px;
 }
 .furniture-container>div{
    /* border: 1px solid black; */

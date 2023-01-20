@@ -85,6 +85,13 @@ width: 400px;
 
 }
 
+#logo-container img{
+    width: 50%; 
+    
+    padding: 0px 120px;
+
+}
+
 #head-core-right{
     position: relative;
     display: flex;
@@ -115,14 +122,14 @@ display: flex;
 justify-content: space-between;
 
 }
-#head-core-right span{
+ #head-core-right span{
     font-size: 18px;
     margin: 1mm;
     box-sizing: content-box;
 } 
 #ordersign-in-text{
     margin-top: 2mm;
-}
+}  
 
 
 #one-nav{
@@ -248,7 +255,7 @@ img{
 }
 #landpage-text{
     position: absolute;
-    top: 5%;
+    top: 1%;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
@@ -944,6 +951,11 @@ font-size: large;
     margin-left: auto;
 }
 
+#bold-wl{
+    font-weight: bold;
+}
+
+
 #nav-media{
     /* border-bottom: 1px solid #ccc; */
     position: relative;
@@ -1043,3 +1055,4 @@ border: double black;
  }
 
   }
+
