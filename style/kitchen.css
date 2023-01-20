@@ -544,6 +544,7 @@ padding-right: 30px;
 
 }
 
+
 #footer-one>ul h2{
     font-size: 14px;
     margin: 0;
@@ -563,7 +564,11 @@ padding-right: 30px;
     text-align: left;
 
 }
+#footer-one>ul a{
+color: #fff;
 
+
+}
 @media (min-width: 200px) and (max-width: 800px) {
     #nav-media{
         display: block;

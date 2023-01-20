@@ -75,18 +75,19 @@ border: double black;
     color: #666;
 }
 #logo-container{
-width: 400px;
-/* border: 1px solid red; */
+width: 300px;
+
+/* border: 1px solid red;  */
 }
 #logo-container img{
-    width: 80%; 
+    width: 90%; 
     
-    padding: 0px 40px;
+    /* padding: 0px 40px; */
 
 }
 
 #logo-container img{
-    width: 50%; 
+    width: 90%; 
     
     padding: 0px 120px;
 
@@ -1037,6 +1038,129 @@ border: double black;
 
 }
 
+
+
+#head-core {
+    max-width: 1680px;
+    margin: 0 auto;
+    padding: 8px 32px 0;
+    min-height: auto;
+    border-bottom: none;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+#header-core-left {
+    display: flex;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+
+}
+
+#header-core-left form {
+    max-width: 384px;
+    position: relative;
+    float: left;
+    width: 30.4em;
+    max-width: 100%;
+    z-index: 505;
+    min-height: 32px;
+    background: #fff;
+}
+
+#header-core-left form input {
+    width: 100%;
+    font-size: 16px;
+    height: 48px;
+    font-family: var(--webfont-primary, sans-serif);
+    color: #666;
+    padding: 10px 48px 10px 16px;
+    line-height: 20px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 0;
+    border: 1px solid #666;
+    z-index: 3;
+    margin-bottom: 0;
+    font-weight: 400;
+
+}
+
+#header-core-left form input:hover {
+    border: double black;
+}
+
+#header-core-left form i {
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    margin: 4px 2px;
+    background: 0 0;
+    font-size: 2.3em;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #666;
+}
+
+#logo-container {
+    width: 400px;
+    /* border: 1px solid red; */
+}
+
+#logo-container img {
+    width: 90%;
+
+    padding: 0px 40px;
+
+}
+
+#head-core-right {
+    position: relative;
+    display: flex;
+    min-height: 32px;
+    box-sizing: content-box;
+    flex: 1;
+    /* border: 1px solid red; */
+    width: 250px;
+    justify-content: space-between;
+    margin: 30px;
+}
+
+#head-core-right a {
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
+    background-color: transparent;
+    font-size: 14px;
+    /* margin: 1mm; */
+    color: #222;
+
+}
+
+#head-core-right i {
+    font-size: 23px;
+    margin: 2mm;
+}
+
+#ordersign-in {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+#head-core-right span {
+    font-size: 18px;
+    margin: 1mm;
+    box-sizing: content-box;
+}
+
+#ordersign-in-text {
+    margin-top: 2mm;
+}
 
 
 
