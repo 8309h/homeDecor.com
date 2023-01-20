@@ -338,7 +338,7 @@ padding: 2px;
     color: #222;
 }
 #nav-ones ul li:first-child{
-margin-left: 0;
+margin-left: 0xds;
 color: #222;
 font-size: large;
  border-bottom:4px solid #333;
