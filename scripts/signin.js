@@ -1,35 +1,37 @@
-let details_arr = JSON.parse(localStorage.getItem("details")) || [];
+let details_arr = JSON.parse(localStorage.getItem("details")) || []
 let form = document.querySelector('form')
 form.addEventListener('submit', myfun)
 function myfun(event) {
-    event.preventDefault()
-    let name = document.querySelector('#name').value;
+    event.preventDefault();
     let email = document.querySelector('#email').value;
     let password = document.querySelector('#password').value;
+    if (email !== "" && password !== "") {
+        let flag_email = "No";
+        let pass = "";
+        let temp;
 
-    if (name !== "" && email !== "" && password !== "") {
-        let flag = "yes"
         for (let i = 0; i < details_arr.length; i++) {
             if (email == details_arr[i].email) {
-                flag = "no"
+
+                flag_email = "yes";
+                pass = details_arr[i].password;
+
+                temp = details_arr[i];
+                localStorage.setItem("loggedUser", JSON.stringify(details_arr[i]));
+
+
             }
+            console.log(details_arr[i]);
         }
-        if (flag == "no") {
-            alert("email already taken❌")
+
+        if (flag_email == "yes" && pass == password) {
+
+            location.href = "index.html";
+            form.reload();
         } else {
-            let details_obj = {
-                name, email, password
-            }
-            details_arr.push(details_obj)
-            localStorage.setItem("details", JSON.stringify(details_arr))
-            alert("sign up successful👍")
-            form.reset();
-            window.location.assign("./login.html");
+            alert("Invalid Email or Password ")
         }
-
+    } else {
+        alert("please fill the valid details")
     }
-    else {
-        alert("Please fill Deteils")
-    }
-};
-
+}

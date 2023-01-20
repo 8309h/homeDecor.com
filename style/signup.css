@@ -20,7 +20,7 @@ form {
     background-color: black;
     color: white;
     border-radius: 5px;
-    border: 2px solid rgb(34, 4, 84);
+    border: 5px solid rgb(34, 4, 84);
 }
 
 h2 {
@@ -50,7 +50,7 @@ input {
     border: 1px solid #ccc;
     box-sizing: border-box;
     resize: vertical;
-   
+    opacity: 0.9;
 }
 
 input[type="submit"]:hover {
