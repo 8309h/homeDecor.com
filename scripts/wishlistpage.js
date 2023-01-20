@@ -28,7 +28,7 @@ document.querySelector("#welcome").textContent = logeduser.name;
         name.textContent = element.Name;
 
         let price = document.createElement("h5");
-        price.textContent = element.Price;
+        price.textContent = "₹ " + element.Price;
 
         let desc = document.createElement("p");
         desc.textContent = element.Description;
@@ -65,10 +65,11 @@ document.querySelector("#welcome").textContent = logeduser.name;
 
         })
 
-        let removeProduct = document.createElement("button");
-        removeProduct.innerText = "X";
+        let removeProduct = document.createElement("i");
+       // removeProduct.innerText = "X";
+       removeProduct.setAttribute("id","heartss")
         // <FontAwesomeIcon icon="fa-thin fa-xmark-large" />
-
+removeProduct.setAttribute("class","fa fa-minus-circle")
         function remove() {
             event.target.parentNode.remove();
             data.splice(index, 1);

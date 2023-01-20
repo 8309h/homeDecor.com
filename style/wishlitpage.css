@@ -612,6 +612,32 @@ padding-right: 30px;
     gap: 20px;
     /* border: 1px solid red; */
 }
+#heartss{
+    font-size: 33px;
+    background-color: transparent;
+    border: 0;
+    position: relative;
+    top: -460px;
+    right:-90px;
+    color: rgb(54, 49, 49);
+}
+#heartss:hover{
+    color: grey;
+    transform: scale(1.1);
+}
+button{
+    border: 0;
+    margin: 10px;
+    font-size: larger;
+    border-radius: 5px;
+    background-color: #EEEEEE;
+    padding: 10px;
+    font-weight: 530;
+}
+button:hover{
+    zoom: 1.05;
+    background-color: #E0E0E0;
+}
 
 
 
