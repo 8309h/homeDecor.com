@@ -25,6 +25,7 @@ function abcd() {
 
 // FURNITURE DATA 
 
+
 let wishListData = []
 let ADDtoCartData = []
 let furniture = [
@@ -62,6 +63,7 @@ let furniture = [
         "Image": "https://cb.scene7.com/is/image/Crate/FayeSofaSOSSF21_3D/$web_pdp_main_carousel_med$/210716142430/faye-sofa.jpg",
         "Price": 45000,
         "Description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione  explicabo sunt placeat corrupti alias esse"
+
 
 
     },
@@ -518,12 +520,24 @@ let furniture = [
 
     },
     {
-        "ProductId": 50,
-        "Name": "Green Adirondack",
-        "Category": "Table",
-        "Image": "https://cb.scene7.com/is/image/Crate/VistaIIGreenSideTableSHS19_1x1/$web_pdp_main_carousel_med$/190411135543/vista-ii-green-adirondack-side-table.jpg",
-        "Price": 13000,
-        "Description": "Vista II Green Adirondack Outdoor Side Table by POLYWOOD®"
+
+
+        "ProductId":1,
+        "Name":"Teak Extendable Dining Table",
+        "Category":"Table",
+        "Image":"https://cb.scene7.com/is/image/Crate/LakinExtDiningTable3QSSS20_1x1/$web_pdp_main_carousel_med$/200402124905/lakin-81-recycled-teak-extendable-dining-table.jpg",
+        "Price":20000,
+        "Description":"Good in quality and highle sold product"
+        
+},
+    {
+        "ProductId":50,
+        "Name":"Green Adirondack",
+        "Category":"Table",
+        "Image":"https://cb.scene7.com/is/image/Crate/VistaIIGreenSideTableSHS19_1x1/$web_pdp_main_carousel_med$/190411135543/vista-ii-green-adirondack-side-table.jpg",
+        "Price":13000,
+        "Description":"Vista II Green Adirondack Outdoor Side Table by POLYWOOD®"
+        
 
 
     },
