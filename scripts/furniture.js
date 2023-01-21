@@ -15,18 +15,12 @@ let furnitureData=document.querySelector(".furniture-container")
 // furnitureData.style.marginTop="30px"
 // FURNITURE DATA 
 
+
+
 let wishListData=[]
 let ADDtoCartData=[]
 let furniture=[
-//     {
-//         "ProductId":1,
-//         "Name":"Teak Extendable Dining Table",
-//         "Category":"Table",
-//         "Image":"https://cb.scene7.com/is/image/Crate/LakinExtDiningTable3QSSS20_1x1/$web_pdp_main_carousel_med$/200402124905/lakin-81-recycled-teak-extendable-dining-table.jpg",
-//         "Price":20000,
-//         "Description":"Good in quality and highle sold product"
-          
-//    },
+  
    {
        "ProductId":2,
        "Name":"Eaves 86 Rectangular Dining Table",
@@ -508,6 +502,15 @@ let furniture=[
 
     },
     {
+        "ProductId":1,
+        "Name":"Teak Extendable Dining Table",
+        "Category":"Table",
+        "Image":"https://cb.scene7.com/is/image/Crate/LakinExtDiningTable3QSSS20_1x1/$web_pdp_main_carousel_med$/200402124905/lakin-81-recycled-teak-extendable-dining-table.jpg",
+        "Price":20000,
+        "Description":"Good in quality and highle sold product"
+        
+},
+    {
         "ProductId":50,
         "Name":"Green Adirondack",
         "Category":"Table",
@@ -560,12 +563,13 @@ function displayData(data){
        // but.textContent="♡"
       but.setAttribute("class","fa fa-heart")
       localStorage.setItem("wishlist",JSON.stringify(wishListData))
-        })
+        
 
         div.append(image,name,price,desc,buynow,but)
 
         furnitureData.append(div);
     })
-}
+    }
+
 
 displayData(furniture);
