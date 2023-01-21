@@ -608,6 +608,25 @@ padding-right: 30px;
     color: #666;
 }
 
+#buysection{
+    display: flex;
+
+}
+
+#buysection h1{
+    margin-left: 135px;
+}
+
+#buysection button{
+    border: 0;
+    margin: 10px;
+    font-size: larger;
+    border-radius: 5px;
+    background-color: #EEEEEE;
+    padding: 10px;
+    font-weight: 530;
+}
+
 #card-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);

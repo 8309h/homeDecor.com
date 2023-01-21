@@ -1,0 +1,27 @@
+
+#id{
+  width:20%;
+  height:60px;
+  margin: auto;
+  padding-top: 80px;
+  
+}#id div input{
+  width: 100px;
+  height:100%
+}#submit{
+  color:black;
+  font-size: 20px;
+}#submit:hover{
+  color:gray
+}#otp:hover{
+  font-size: 20px;
+}#id>div>span>button{
+  background-color:green;
+  padding: 10px 10px;
+  padding-left: 30px;
+
+}#id>div>span{
+  padding-left:10px;
+  height: 10px;
+}
+   
