@@ -578,23 +578,22 @@ function displayData(data) {
             localStorage.setItem("Add To Cart", JSON.stringify(ADDtoCartData))
         })
 
-        let but = document.createElement("i")
-        but.setAttribute("id", "heartss")
-        // but.textContent="♡"
-        but.setAttribute("class", "fa fa-heart")
+              
+        let but=document.createElement("i")
+        but.setAttribute("id","heartss")
+       // but.textContent="♡"
+      but.setAttribute("class","fa fa-heart")
 
-        but.addEventListener("click", function () {
-            let temp = el
-            wishListData.push(temp)
-            localStorage.setItem("wishlist", JSON.stringify(wishListData))
+      but.addEventListener("click",function(){
+        let temp=el
+        wishListData.push(temp)
+        localStorage.setItem("wishlist",JSON.stringify(wishListData))
 
-        })
-       
-        div.append(image, names, price, desc, buynow, but)
+      })
+      
+          div.append(image,names,price,desc,buynow,but)
 
         furnitureData.append(div);
-
-
 
 
     })
