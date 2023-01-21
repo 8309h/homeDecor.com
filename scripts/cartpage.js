@@ -26,6 +26,13 @@ function displayProducts(data) {
 
         let increment = document.createElement("button");
         increment.innerText = "+";
+        let buy=document.createElement("button")
+        buy.innerText="Buy"
+        buy.style.color="red"
+        buy.style.fontSize="20px"
+        buy.addEventListener("click",()=>{
+            window.location.assign('./payment.html')
+        })
 
         increment.addEventListener("click", () => {
             // if(+data[index].quantity<100){
@@ -63,7 +70,7 @@ function displayProducts(data) {
             displayProducts(data);
         });
 
-        card.append(image, name, price, desc, increment, quantity, decrement, removeProduct);
+        card.append(image, name, price, desc, increment, quantity, decrement, removeProduct,buy);
 
         container.append(card);
     });
