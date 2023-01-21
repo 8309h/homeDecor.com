@@ -9,10 +9,24 @@
 let furnitureData=document.querySelector(".furniture-container")
 
 
-// furnitureData.style.border="1px solid black"
-// furnitureData.style.width="90%"
-// furnitureData.style.margin="auto"
-// furnitureData.style.marginTop="30px"
+let bag=JSON.parse(localStorage.getItem("Addtocart"))
+let data=[]
+data=bag
+
+
+function abcd(){
+   let serch=document.getElementById("search").value;
+   
+   
+       let newData=data.filter(function(elem){
+       return elem.Name.toLowerCase().includes(serch.toLowerCase()); 
+        
+       })
+      console.log(newData)
+       displayData(newData)
+   }
+   
+
 // FURNITURE DATA 
 
 
@@ -533,13 +547,14 @@ localStorage.setItem("furniture",JSON.stringify(furniture))
 
 
 function displayData(data){
+    furnitureData.innerHTML=""
     data.forEach(function(el){
 
         let div=document.createElement("div")
         let image=document.createElement("img")
         image.setAttribute("src",el.Image)
-        let name=document.createElement("h3")
-        name.textContent=el.Name;
+        let names=document.createElement("h3")
+        names.textContent=el.Name;
         let price=document.createElement("h5")
         price.textContent= "₹ "+el.Price
         let desc=document.createElement("p")
@@ -562,12 +577,28 @@ function displayData(data){
         but.setAttribute("id","heartss")
        // but.textContent="♡"
       but.setAttribute("class","fa fa-heart")
+<<<<<<< HEAD
       localStorage.setItem("wishlist",JSON.stringify(wishListData))
         
+=======
+>>>>>>> d39480564c8b6c14efe5fe93d0af4f184d51faf4
 
-        div.append(image,name,price,desc,buynow,but)
+      but.addEventListener("click",function(){
+        let temp=el
+        wishListData.push(temp)
+        localStorage.setItem("wishlist",JSON.stringify(wishListData))
+
+      })
+      
+       
+
+        div.append(image,names,price,desc,buynow,but)
 
         furnitureData.append(div);
+
+    
+
+
     })
     }
 

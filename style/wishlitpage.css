@@ -224,7 +224,9 @@ img {
     right: 0;
     color: #666;
 }
-
+a{
+    color:rgba(255, 255, 255, 0.84) ;
+}
 #logo-container {
     width: 400px;
     /* border: 1px solid red; */
@@ -413,14 +415,7 @@ box img {
     color: #666;
 }
 
-#card-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    width: 80%;
-    margin: auto;
-    gap: 20px;
-    /* border: 1px solid red; */
-}
+
 
 /* img{
     width: 100%;
@@ -513,6 +508,139 @@ border: double black;
     margin: 2mm;
 
 }
+
+
+
+footer{
+    font-family: var(--webfont-primary, sans-serif);
+    background: #333;
+    clear: both;
+    margin-top: 50px;
+}
+
+#footer-one{
+    max-width: 1008px;
+    margin: 0 auto;
+    clear: both;
+    box-sizing: content-box;
+}
+#footer-one>ul{
+    display: flex;
+    justify-content: center;
+    padding: 75px 0 65px;
+    border-bottom: solid 1px #666;
+}
+#footer-one>ul>li{
+    display: flex;
+    width: 33.33%;
+}
+#footer-one>ul>li>div:nth-child(1){
+margin-top: 5px;
+box-sizing: content-box;
+/* border: 2px solid red; */
+text-align: right;
+
+} #mediaa>h2{
+    padding-left: 30px;
+}
+#mediaa>div{
+    display: flex;
+    color: white;
+    /* border: 1px solid red; */
+    justify-content: space-between;
+    width: 150px;
+    height: 1.5cm;
+    margin: 10px;
+}
+#mediaa i{
+    font-size: 20px;
+}
+
+
+#footer-one>ul>li>div:nth-child(1) img{
+    width: 40%;
+}
+#footer-one>ul>li>div:nth-child(1) i{
+    width: 100%;
+    /* border: 1 px solid red; */
+}
+
+.icon-foot{
+    border: 2 px solid white;
+
+
+}
+.icon-foot>i{
+    font-size: 28px;
+}
+
+#footer-one>ul>li>div:nth-child(2){
+margin-left: 18px;
+padding-right: 30px;
+
+
+}
+
+#footer-one>ul h2{
+    font-size: 14px;
+    margin: 0;
+    padding-bottom: 5px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    text-align: left;
+}
+
+#footer-one>ul span{
+    display: block;
+    font-size: 12px;
+    color: #ccc;
+    line-height: 20px;
+    /* text-align: left; */
+    text-align: left;
+
+}
+
+#card-container >div{
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+}
+#card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 96%;
+    margin: auto;
+    gap: 20px;
+    /* border: 1px solid red; */
+}
+#heartss{
+    font-size: 33px;
+    background-color: transparent;
+    border: 0;
+    position: relative;
+    top: -460px;
+    right:-90px;
+    color: rgb(54, 49, 49);
+}
+#heartss:hover{
+    color: grey;
+    transform: scale(1.1);
+}
+button{
+    border: 0;
+    margin: 10px;
+    font-size: larger;
+    border-radius: 5px;
+    background-color: #EEEEEE;
+    padding: 10px;
+    font-weight: 530;
+}
+button:hover{
+    zoom: 1.05;
+    background-color: #E0E0E0;
+}
+
+
+
 
 
 @media (min-width: 200px) and (max-width: 800px) {

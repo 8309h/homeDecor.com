@@ -9,6 +9,8 @@ function displayProducts(data) {
 
 //     let 
 // }
+
+
 let logeduser = JSON.parse(localStorage.getItem("loggedUser")) || [];
 console.log(logeduser)
 document.querySelector("#welcome").textContent = logeduser.name;
@@ -26,41 +28,12 @@ document.querySelector("#welcome").textContent = logeduser.name;
         name.textContent = element.Name;
 
         let price = document.createElement("h5");
-        price.textContent = element.Price;
+        price.textContent = "₹ " + element.Price;
 
         let desc = document.createElement("p");
         desc.textContent = element.Description;
 
-        // let increment = document.createElement("button");
-        // increment.innerText = "+";
-
-        // increment.addEventListener("click", () => {
-        //     // if(+data[index].quantity<100){
-        //         data[index].quantity = parseInt(element.quantity) + 1;
-        //         localStorage.setItem("wishlist", JSON.stringify(data));
-
-        //         displayProducts(data);
-        //     // }
-        // });
-
-        // let quantity = document.createElement("span");
-        // if(element.quantity == undefined || element.quantity == null)
-        // element.quantity = 1;
-        // quantity.innerText = element.quantity;
-
-        // let decrement = document.createElement("button");
-        // decrement.innerText = "-";
-
-        // decrement.addEventListener("click", () => {
-        //     if(data[index].quantity>1){
-        //         data[index].quantity = parseInt(element.quantity)-1;
-        //         localStorage.setItem("wishlist",JSON.stringify(data));
-
-        //         displayProducts(data);
-        //     }
-        // });
-
-        // let ADDtoCartData = [];
+      
 
         let addtocart = document.createElement("button");
         addtocart.innerText = "ADD TO CART"
@@ -92,10 +65,11 @@ document.querySelector("#welcome").textContent = logeduser.name;
 
         })
 
-        let removeProduct = document.createElement("button");
-        removeProduct.innerText = "X";
+        let removeProduct = document.createElement("i");
+       // removeProduct.innerText = "X";
+       removeProduct.setAttribute("id","heartss")
         // <FontAwesomeIcon icon="fa-thin fa-xmark-large" />
-
+removeProduct.setAttribute("class","fa fa-minus-circle")
         function remove() {
             event.target.parentNode.remove();
             data.splice(index, 1);
@@ -114,4 +88,5 @@ document.querySelector("#welcome").textContent = logeduser.name;
 
     // console.log(myData)
 }
+
 
