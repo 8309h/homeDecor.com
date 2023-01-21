@@ -1,0 +1,70 @@
+#pass-word{
+    margin: auto;
+    width: 20%;
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    background-color: #222;
+    margin-top: 10px;
+}
+#pass-word input{
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 5px 0px;
+}
+#pass-word button{
+    width: 100%;
+    padding: 5px  0px;
+}
+h1{
+    text-align: center;
+}
+h1+form {
+        width: 20%;
+        margin: auto;
+        padding: 25px;
+        background-color: #222;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      
+      }
+h1+form input,select{
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 7px 0px 7px 2px
+}
+#container{
+    display: none;
+}
+#inputDiv{
+    width:50%;
+    height: 20%;
+  
+    margin: auto;
+}
+#inputDiv input{
+    width: 10%;
+  
+    margin-right: 5px;
+    padding: 5%;
+    font-size: 25px;
+}
+#otpDiv{
+    margin: auto;
+    width: 30%;
+    background-color: whitesmoke;
+    padding: 5%;
+    text-align: center;
+}
+#butt{
+   margin-left: 30%;
+   margin-top: 10px;
+   display: flex;
+   gap: 20px;
+}
+#otpDiv + p{
+  font-size: 25px;
+}
+
+
+
+    
