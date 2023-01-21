@@ -69,6 +69,16 @@ function displaycard(out) {
                 totalprice.textContent = total;
             }
 
+
+        let increment = document.createElement("button");
+        increment.innerText = "+";
+        let buy=document.createElement("button")
+        buy.innerText="Buy"
+        buy.style.color="red"
+        buy.style.fontSize="20px"
+        buy.addEventListener("click",()=>{
+            window.location.assign('./payment.html')
+
         })
 
 
@@ -87,7 +97,7 @@ function displaycard(out) {
         totalprice.textContent = total;
 
 
-        card.append(image, name, price, desc, btn1, qtn, btn2, btn3);
+        card.append(image, name, price, desc, btn1, qtn, btn2, increment,btn3);
 
         document.querySelector("#card-container").append(card);
 
@@ -112,6 +122,7 @@ function displaycard(out) {
 
 
     })
+
 
 
 
