@@ -435,6 +435,9 @@ let kitchenData=[
 ]
 
 
+let kData=document.querySelector(".kitchen-container")
+
+
 
 
 localStorage.setItem("kitchen", JSON.stringify(kitchenData))
@@ -466,28 +469,23 @@ function displayData(data){
             ADDtoCartData.push(temp)
             localStorage.setItem("Add To Cart",JSON.stringify(ADDtoCartData))
         })
-              
-        let but=document.createElement("button")
-        but.textContent="♡"
-        but.style.padding="0"
-        but.style.border='none'
-        but.style.fontSize="20px"
-        but.style.color="red"
-        but.style.fontSize="20 px"
-        but.style.backgroundColor="white"
-        but.style.fontWeight="bold"
-        but.addEventListener("click",function(){
-        let temp=el
-         wishListData.push(temp);
+      
 
             
 
-            localStorage.setItem("wishlist",JSON.stringify(wishListData))
-        })
+        //     localStorage.setItem("wishlist",JSON.stringify(wishListData))
+        // })
+
+        let but=document.createElement("i")
+        but.setAttribute("id","heartss")
+       // but.textContent="♡"
+      but.setAttribute("class","fa fa-heart")
 
         div.append(image,name,price,desc,buynow,but)
 
         //APPENDING PROTION  REMAINING
+
+        kData.append(div)
     })
 }
 

@@ -1,28 +1,74 @@
-let container = document.getElementById("card-container");
 
-let cartData = JSON.parse(localStorage.getItem("Add To Cart")) || [];
-console.log(cartData);
-displayProducts(cartData);
+let logeduser = JSON.parse(localStorage.getItem("loggedUser")) || [];
+console.log(logeduser)
+document.querySelector("#welcome").textContent = logeduser.name;
+// console.log(logeduser.name)
 
-function displayProducts(data) {
+let cartitem = JSON.parse(localStorage.getItem("Add To Cart")) || [];
 
-    container.innerHTML = null;
+let displaycartcount = document.getElementById("cartcount");
 
-    let myData = data.forEach((element, index) => {
+displaycard(cartitem);
+
+function displaycard(out) {
+
+    displaycartcount.innerText = out.length;
+
+    let total = 0;
+    document.querySelector("#card-container").innerHTML = "";
+    let count = 1 
+    let totalprice = document.querySelector("#cart-total");
+
+    if(out.length == 0){
+        totalprice.textContent = 0;
+    }
+
+    out.forEach(function (el, i) {
 
         let card = document.createElement("div");
 
         let image = document.createElement("img");
-        image.setAttribute("src", element.Image);
+        image.setAttribute("src", el.Image);
 
         let name = document.createElement("h4");
-        name.textContent = element.Name;
+        name.textContent = el.Name;
 
         let price = document.createElement("h5");
-        price.textContent = element.Price;
+        price.textContent = el.Price;
 
         let desc = document.createElement("p");
-        desc.textContent = element.Description;
+        desc.textContent = el.Description;
+
+    
+        let btn1 = document.createElement("button");
+        btn1.textContent = "+";
+
+        btn1.addEventListener("click", function () {
+            count++;
+            qtn.textContent = count;
+            total = total + Number(el.Price)
+            totalprice.textContent = total;
+        })
+
+        let qtn = document.createElement("span");
+        el.quantity = 1;
+        qtn.textContent = el.quantity;
+
+        let btn2 = document.createElement("button");
+        btn2.textContent = "-";
+        btn2.addEventListener("click", function () {
+            if (count <= 1) {
+                let cartdata = JSON.parse(localStorage.getItem("Add To Cart")) || [];
+                cartdata.splice(i, 1);
+                localStorage.setItem("Add To Cart", JSON.stringify(cartdata));
+                displaycard(cartdata);
+            } else {
+                count--;
+                qtn.textContent = count;
+                total = total - Number(el.Price)
+                totalprice.textContent = total;
+            }
+
 
         let increment = document.createElement("button");
         increment.innerText = "+";
@@ -32,48 +78,52 @@ function displayProducts(data) {
         buy.style.fontSize="20px"
         buy.addEventListener("click",()=>{
             window.location.assign('./payment.html')
+
         })
 
-        increment.addEventListener("click", () => {
-            // if(+data[index].quantity<100){
-            data[index].quantity = parseInt(element.quantity) + 1;
-            localStorage.setItem("Add To Cart", JSON.stringify(data));
 
-            displayProducts(data);
-            // }
-        });
+        let btn3 = document.createElement("button");
+        btn3.textContent = "Remove";
+        btn3.addEventListener("click", function () {
 
-        let quantity = document.createElement("span");
-        if (element.quantity == undefined || element.quantity == null)
-            element.quantity = 1;
-        quantity.innerText = element.quantity;
+            let cartdata = JSON.parse(localStorage.getItem("Add To Cart")) || [];
+            cartdata.splice(i, 1);
+            localStorage.setItem("Add To Cart", JSON.stringify(cartdata));
+            displaycard(cartdata);
+        })
+        total = total + Number(el.Price);
 
-        let decrement = document.createElement("button");
-        decrement.innerText = "-";
 
-        decrement.addEventListener("click", () => {
-            if (data[index].quantity > 1) {
-                data[index].quantity = parseInt(element.quantity) - 1;
-                localStorage.setItem("Add To Cart", JSON.stringify(data));
+        totalprice.textContent = total;
 
-                displayProducts(data);
-            }
-        });
 
-        let removeProduct = document.createElement("button");
-        removeProduct.innerText = "X";
+        card.append(image, name, price, desc, btn1, qtn, btn2, increment,btn3);
 
-        removeProduct.addEventListener("click", (event) => {
-            event.target.parentNode.remove();
-            data.splice(index, 1);
-            localStorage.setItem("Add To Cart", JSON.stringify(data));
-            displayProducts(data);
-        });
+        document.querySelector("#card-container").append(card);
 
-        card.append(image, name, price, desc, increment, quantity, decrement, removeProduct,buy);
+    })
 
-        container.append(card);
-    });
 
-    // console.log(myData)
+    let dis = document.querySelector("form");
+    dis.addEventListener("submit", function (event) {
+
+        event.preventDefault();
+        let val = document.querySelector("#cupon-filled").value;
+        // console.log(val)
+        if (val === "Harsh30") {
+            totalprice.textContent = Math.floor(total - (total * 0.3));
+            // console.log(totalprice)
+            localStorage.setItem("disprice", totalprice.textContent)
+
+
+        } else {
+            alert("You Enter The Wrong Coupen Code")
+        }
+
+
+    })
+
+
+
+
 }
