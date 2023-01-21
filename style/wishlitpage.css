@@ -651,5 +651,7 @@ button:hover{
         display: none;
     }
 
-
+    footer{
+        flex-wrap: wrap;
+    }
   }
