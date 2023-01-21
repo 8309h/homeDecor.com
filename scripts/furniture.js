@@ -29,18 +29,12 @@ function abcd(){
 
 // FURNITURE DATA 
 
+
+
 let wishListData=[]
 let ADDtoCartData=[]
 let furniture=[
-//     {
-//         "ProductId":1,
-//         "Name":"Teak Extendable Dining Table",
-//         "Category":"Table",
-//         "Image":"https://cb.scene7.com/is/image/Crate/LakinExtDiningTable3QSSS20_1x1/$web_pdp_main_carousel_med$/200402124905/lakin-81-recycled-teak-extendable-dining-table.jpg",
-//         "Price":20000,
-//         "Description":"Good in quality and highle sold product"
-          
-//    },
+  
    {
        "ProductId":2,
        "Name":"Eaves 86 Rectangular Dining Table",
@@ -522,6 +516,15 @@ let furniture=[
 
     },
     {
+        "ProductId":1,
+        "Name":"Teak Extendable Dining Table",
+        "Category":"Table",
+        "Image":"https://cb.scene7.com/is/image/Crate/LakinExtDiningTable3QSSS20_1x1/$web_pdp_main_carousel_med$/200402124905/lakin-81-recycled-teak-extendable-dining-table.jpg",
+        "Price":20000,
+        "Description":"Good in quality and highle sold product"
+        
+},
+    {
         "ProductId":50,
         "Name":"Green Adirondack",
         "Category":"Table",
@@ -574,6 +577,11 @@ function displayData(data){
         but.setAttribute("id","heartss")
        // but.textContent="♡"
       but.setAttribute("class","fa fa-heart")
+<<<<<<< HEAD
+      localStorage.setItem("wishlist",JSON.stringify(wishListData))
+        
+=======
+>>>>>>> d39480564c8b6c14efe5fe93d0af4f184d51faf4
 
       but.addEventListener("click",function(){
         let temp=el
