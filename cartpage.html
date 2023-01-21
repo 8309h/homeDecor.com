@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>homeDecor-Cart page</title>
+    <title>Cart page</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./style/cartpage.css">
 </head>
@@ -58,8 +58,8 @@
       <a href=""><i class="fa fa-map-marker" aria-hidden="true"></i></a>
    
   </div>
-  <div><a href="wishlistpage.html"><i class="fa fa-heart" aria-hidden="true"></i> </a><span>0</span></div>
-  <div><a href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a><span>0</span></div>
+  <div><a href="wishlistpage.html"><i class="fa fa-heart" aria-hidden="true"></i> </a><span id="wishcount"></span></div>
+  <div><a href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a><span id="cartcount"></span></div>
    </div>
    
   </div>
@@ -196,6 +196,14 @@
     </div>
   </div>
 </div>
+
+<div id="buysection">
+  <h1 id="total">Your Total Cart Price is:- <span id="cart-total">0</span></h1>
+  
+  <button id="buybtn" > Buy Now</button>
+
+</div>
+
 <div id="card-container">
   <!-- favourite card data -->
 </div>
