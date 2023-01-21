@@ -570,6 +570,7 @@ color: #fff;
 
 
 }
+
 @media (min-width: 200px) and (max-width: 800px) {
     #nav-media{
         display: block;
