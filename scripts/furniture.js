@@ -585,15 +585,9 @@ function displayData(data){
 
       })
       
-       
-
-        div.append(image,names,price,desc,buynow,but)
+          div.append(image,names,price,desc,buynow,but)
 
         furnitureData.append(div);
-
-    
-
-
     })
     }
 
