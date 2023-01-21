@@ -577,11 +577,6 @@ function displayData(data){
         but.setAttribute("id","heartss")
        // but.textContent="♡"
       but.setAttribute("class","fa fa-heart")
-<<<<<<< HEAD
-      localStorage.setItem("wishlist",JSON.stringify(wishListData))
-        
-=======
->>>>>>> d39480564c8b6c14efe5fe93d0af4f184d51faf4
 
       but.addEventListener("click",function(){
         let temp=el
