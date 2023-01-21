@@ -474,7 +474,7 @@ button:hover{
 
 
 #media-search input{
-    width: 95%;
+    width: 91%;
     margin: auto;
     height: 1cm;
 
@@ -492,6 +492,7 @@ border: double black;
 #media-search form i{
     font-size: 18px;
     margin: 2mm;
+    width: 5%;
 
 }
 
@@ -594,12 +595,14 @@ padding-right: 30px;
 }
 
 @media (min-width: 200px) and (max-width: 800px) {
-    #nav-media{
+    #nav-media,#media-search{
         display: block;
     }
     #nav-ones,#head-core,#one-nav,#two-nav{
         display: none;
     }
-
+    footer{
+        flex-wrap: wrap;
+    }
 
   }

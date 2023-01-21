@@ -669,6 +669,8 @@ color: #fff;
     #nav-ones,#head-core,#one-nav,#two-nav{
         display: none;
     }
-
+    footer{
+        flex-wrap: wrap;
+    }
 
   }

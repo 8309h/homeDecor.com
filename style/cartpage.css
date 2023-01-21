@@ -569,7 +569,9 @@ padding-right: 30px;
     #nav-ones,#head-core,#one-nav,#two-nav{
         display: none;
     }
-
+    footer{
+        flex-wrap: wrap;
+    }
 
   }
 
