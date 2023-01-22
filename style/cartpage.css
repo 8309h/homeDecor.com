@@ -627,11 +627,98 @@ padding-right: 30px;
     font-weight: 530;
 }
 
-#card-container {
+#cart-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     width: 80%;
     margin: auto;
     gap: 20px;
-    /* border: 1px solid red; */
+   
 }
+#total {
+    width: 30%;
+    height: 900px;
+    position: sticky;
+    top: 100px;
+    left: 30px;
+    margin-bottom: 0px;
+    background-color: whitesmoke;
+
+}
+
+#total h1 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode',
+        'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    color:  #222;;
+}
+
+#flex {
+    
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+#finalprice{
+    /* width: 90%; */
+    margin: auto;
+    padding: 20px;
+    background-color: #222;
+    margin-top: 10px;
+    border-radius: 10px;
+
+
+}
+
+
+#finalprice input {
+    width: 90%;
+    margin: auto;
+    padding: 10px 0px 10px 0px;
+    margin-bottom: 7px;
+    margin-left: 15px;
+
+}
+
+#finalprice +a>button {
+    width: 100%;
+    margin: auto;
+    padding: 10px 0px 10px 5px;
+    margin-top: 30px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+
+
+}
+
+#finalprice +a>button:hover {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #666;
+    border: none;
+    border-radius: 5px;
+}
+
+ #offer {
+    background-color: whitesmoke;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode',
+        'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+   
+
+} 
+
+#offer>p {
+    font-size: 20px;
+    border: none;
+
+} 
+
+

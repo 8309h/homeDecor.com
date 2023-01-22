@@ -1,6 +1,7 @@
 let logeduser = JSON.parse(localStorage.getItem("loggedUser")) || [];
 console.log(logeduser)
 document.querySelector("#welcome").textContent = logeduser.name;
+
 let sidemenu=document.getElementById("header-menu")
 let furnitureContainer=document.getElementById("furniture-container")
  let furnitureContainermouseover=document.getElementById("furniture-container-mouseover")
@@ -8,6 +9,7 @@ let furnitureContainer=document.getElementById("furniture-container")
  let kitchenContainermouseover=document.getElementById("Kitchen-container-mouseover")
  let tableContainer=document.getElementById("table-container")
  let tableContainermouseover=document.getElementById("table-container-mouseover")
+
 
  let delay5000=function () {
     setTimeout(() => {

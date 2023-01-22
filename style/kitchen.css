@@ -376,20 +376,6 @@ font-size: large;
 
 
 
-.kitchen-container{
-    display: grid;
-    width: 95%;
-    margin: auto;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: auto;
-    gap: 20px;
-
-}
-.kitchen-container>div{
-   /* border: 1px solid black; */
-
-   box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
-}
 
 #item-heading{
     margin: 30px 0px 10px 0px;
@@ -471,11 +457,7 @@ button:hover{
     color: #666; 
 }
 
-/* #card-container{
-    display: flex;
-    border: 1px solid green;
-    justify-content: center;
-} */
+
 
 
 
@@ -661,6 +643,62 @@ color: #fff;
 
 
 }
+.kitchen-data{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+   
+
+}
+#div1 {
+    width: 20%;
+    height: 700px;
+    background-color: whitesmoke;
+    position: sticky;
+    top: 10px;
+    left: 10px;
+    padding: 20px;
+}
+
+#div1 p {
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode',
+        'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: red;
+}
+
+#div1 select {
+    width: 100%;
+    padding: 10px 0px;
+}
+
+#div1 h1 {
+    font-size: 6.0rem;
+    margin-top: 10px;
+    text-align: center;
+}
+
+#div2 {
+   
+    width: 70%;
+    margin-top: 10px;
+
+
+}
+.kitchen-container{
+    display: grid;
+    width: 100%;
+    margin: auto;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto;
+    gap: 20px;
+
+}
+.kitchen-container>div{
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+}
+
+
 
 @media (min-width: 200px) and (max-width: 800px) {
     #nav-media{
@@ -672,5 +710,22 @@ color: #fff;
     footer{
         flex-wrap: wrap;
     }
+    .kitchen-container{
+      
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: auto;
+        gap: 20px;
+    
+    }
+    #heartss{
+        font-size: 20px;
+        background-color: transparent;
+        border: 0;
+        position: relative;
+        top: -450px;
+        right:-130px;
+        color: #666;
+    }
+   
 
   }

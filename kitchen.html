@@ -33,34 +33,33 @@
   
    <!-- SERACH functionality  bar  -->
   
-    <div id="head-core">
-   <div id="header-core-left">
-  <div>
-      <form action="/search">
+   <div id="head-core">
+    <div id="header-core-left">
+      <div>
+        <form action="/search">
           <div>
-              <input type="search" placeholder="What can we help you find?">
-              <i class="fa fa-search" aria-hidden="true"></i>
+            <input type="search" oninput="search()" placeholder="What can we help you find?">
+            <i class="fa fa-search" aria-hidden="true"></i>
           </div>
-      </form>
-  </div>
-   </div>
+        </form>
+      </div>
+    </div>
   
    <div id="logo-container"><a href="index.html"><img  src="https://www.bing.com/images/blob?bcid=Sz1DEV1dmyMFuw" alt=""></a></div>
    <div id="head-core-right">
   <div id="ordersign-in">
-      <div id="ordersign-in-text">
-        <a id="bold-wl" href="">Welcome : <span id="welcome"></span></a>
-        <a href="">Sign In</a>
-   <a href="">Sign In</a>    
-  </div>
+    <div id="ordersign-in-text">
+      <a id="bold-wl" href="">Welcome : <span id="welcome"></span></a>
+
+    </div>
     <div><a href=""><i class="fa fa-user" aria-hidden="true"></i>  </a></div>
   </div>
   <div>
       <a href=""><i class="fa fa-map-marker" aria-hidden="true"></i></a>
    
   </div>
-  <div><a href="wishlistpage.html"><i class="fa fa-heart" aria-hidden="true"></i> </a><span>0</span></div>
-  <div><a href="cartpage.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a><span>0</span></div>
+  <div><a href="wishlistpage.html"><i class="fa fa-heart" aria-hidden="true"></i> </a><span id="wishcount"></span></div>
+  <div><a href="cartpage.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a><span></span></div>
    </div>
    
   </div>
@@ -88,13 +87,10 @@
 <div id="nav-media-user-cart"><a href="signin.html"><i style="color: black;"  class="fa fa-user" aria-hidden="true"></i></a><a href="cartpage.html"><i style="color: black;" class="fa fa-shopping-cart" aria-hidden="true"></i></a></div>
   </div>
 </div>
-
-
-
 <div id="media-search">
   <form action="search">
     
-        <input type="search" placeholder="What can we help you find?">
+    <input type="search" oninput="search()" placeholder="What can we help you find?">
         <i class="fa fa-search" aria-hidden="true"></i>
     
 </form>
@@ -175,18 +171,7 @@
 </ul>
 </nav>
 
-
-<div id="sortfilter">
- <button id="sortt">
-  <span></span>
- </button>
-
-
-</div>
-
-
-
- <!-- NAVBAR ENDS HERE  -->
+<!-- NAVBAR ENDS HERE  -->
  <!--  FURNITURE DATA DISPALYED IN GRID FORMAT  AFTER THIS SECTION  -->
 
  <div id="item-heading">
@@ -194,36 +179,36 @@
 <span>Shop All</span></h3>
 </div>
 
+<div class="kitchen-data">
+  <div id="div1">
+    <p>Sort product by their category</p>
+    <select name="category" id="filter">
+      <option value="all">All</option>
+      <option value="Cookware">Cookware</option>
+      <option value="Cutlery">Cutlery</option>
+      <option value="Bakeware">Bakeware</option>
+      <option value="BBQ&Grilling">BBQ&Grilling</option>
+      <option value="Cutting Boards">Cutting Boards</option>
+      <option value="Kitchen Appliances ">Kitchen Appliances </option>
+      
+    </select>
+    <br />
+    <p> Aarrange product by their price</p>
+    <select name="sorting" id="sort">
+      <option value="">Sorting</option>
+      <option value="LTH">Lower-higher</option>
+      <option value="HTL">Higher-lower</option>
+    </select>
+    <h1>😎</h1>
+  </div>
+  <div id="div2">
+    <div class="kitchen-container">
+      <!-- All products apends here -->
+    </div>
+  </div>
+ 
 
-<div   id="selecttag">
-
-  <select name="" id="">
-
-   <option value="">
-        demo
-   </option>
-
-
-   <option value="">demo</option>
-
-  </select>
-</div>
-<div class="mainDiv">
-
-  <div class="kitchen-data">
-
-    <!-- <input type="search" name="" id="">
-    <select name="" id=""></select> -->
-  
-  
-            <div class="kitchen-container">
-  
-  
-            </div>
-   </div> 
-  
-
-
+ 
 </div>
 
  
