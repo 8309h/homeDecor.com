@@ -540,7 +540,8 @@ let furniture = [
 
 ]
 
-let  wishListData = localStorage.getItem("wishlist") || [];
+
+let  wishListData = JSON.parse(localStorage.getItem("wishlist")) || [];
 let cart  = JSON.parse(localStorage.getItem("Addtocart")) || [];
 
 
