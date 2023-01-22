@@ -1,25 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>OTP</title>
-    <link rel="stylesheet" href="./style/otp.css">
- 
-  </head>
-  <body>
-    <form>
-      <div id="id">
-        <div ><input  type="number" id="otp" /><span ><button>Submit</button></span></div>
-    
-       
-      </div>
-    
-    </form>
-  </body>
-  
-    <script src="./scripts/otp.js"></script>
 
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OTP</title>
+  <link rel="stylesheet" href="./style/otp.css">
+
+</head>
+
+<body>
+  <div id="otpDiv">
+    <p>Sent to registered Mobile No : <span id="otpNum"></span> 
+
+<div id="inputDiv">
+    <input id="otp1" type="tel" maxlength="1" >
+    <input id="otp2" type="tel" maxlength="1" >
+    <input id="otp3" type="tel" maxlength="1" >
+    <input id="otp4" type="tel" maxlength="1" >
+    
+</div>
+<div id="butt">
+  <button id="checkotp" onclick="otpfun()"> CONFIRM <a href="./index.html"></a></button></a>
+  <button id="resendotp" > RESEND <a href="./index.html"></a></button></a>
+</div>
+</div>
   
+  <div id="recipte2">
+
+    <p>Congratulations Mr:<span id="welcome2"></span> Your Payment of Rs:-<span id="disprice"></span> Recrived
+      Successful</p>
+    <p>Your product has been dispatch soon</p>
+    <img
+      src="https://media.istockphoto.com/id/919118254/vector/check-mark-logo-vector-or-icon.jpg?s=612x612&w=0&k=20&c=K2y_bMzP74NfPtxo8xcG2Vi3eT4GwF1aUAeIUPEio3E="
+      alt="">
+    <h2>Thank You for Shopping</h2>
+    <a href="./index.html"><button>shop more</button></a>
+  </div>
+</body>
+
+<script src="./scripts/otp.js"></script>
+
+
 </html>

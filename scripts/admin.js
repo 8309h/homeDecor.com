@@ -2,14 +2,20 @@
 let addingform = document.querySelector("#container");
 let otpform = document.getElementById("otpDiv");
 
+let logeduser = JSON.parse(localStorage.getItem("loggedUser")) || [];
+console.log(logeduser)
+document.querySelector("#welcome").textContent = logeduser.name;
+
+
 logeduser = JSON.parse(localStorage.getItem("loggedUser")) || [];
 console.log(logeduser)
+let phonen = logeduser.phoneno
 document.querySelector("#otpNum").textContent = logeduser.phoneno;
 
 otpform.style.display = "block"
 
 let res_otp = otp();
-    alert("Your OTP is "+res_otp)
+    alert("OTP Sent to Your Number : " +res_otp)
 function otpfun (){
     let add1=document.getElementById("otp1").value;
     let add2=document.getElementById("otp2").value;
@@ -34,6 +40,15 @@ function otp(){
     return pass;
 }
 
+ document.querySelector("#resendotp").addEventListener("click",function(e){
+    e.preventDefault();
+    //console.log("hi")
+     location.href = "admin.html"
+  })
+   
+
+
+
 
 let productsArr = JSON.parse(localStorage.getItem("addproducts")) || [];
   let form = document.querySelector("h1+form");
@@ -52,16 +67,13 @@ let productsArr = JSON.parse(localStorage.getItem("addproducts")) || [];
     if ( product.Category == "All") {
       alert("please provide category");
     } else {
-      productsArr.push(product);
+      productsArr.unshift(product);
+
       localStorage.setItem("addproducts", JSON.stringify(productsArr));
       alert('product added successfully')
+      window.location.assign("./furniture.html");
    }
   });
 
-  document.querySelector("#resendotp").addEventListener("click",function(e){
-    e.preventDefault();
-    //console.log("hi")
-     location.href = "admin.html"
-  })
-   
+ 
   

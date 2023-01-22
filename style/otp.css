@@ -1,27 +1,80 @@
+ #inputDiv{
+  width:70%;
+  text-align: center;
+  height: 20%;
 
-#id{
-  width:20%;
-  height:60px;
   margin: auto;
-  padding-top: 80px;
-  
-}#id div input{
-  width: 100px;
-  height:100%
-}#submit{
-  color:black;
-  font-size: 20px;
-}#submit:hover{
-  color:gray
-}#otp:hover{
-  font-size: 20px;
-}#id>div>span>button{
-  background-color:green;
-  padding: 10px 10px;
-  padding-left: 30px;
-
-}#id>div>span{
-  padding-left:10px;
-  height: 10px;
 }
-   
+#inputDiv input{
+  width: 10%;
+  margin-right: 5px;
+  padding: 5%;
+  font-size: 25px;
+}
+#recipte2{
+  display: none;
+  width: 350px;
+  text-align: center;
+  margin: auto;
+  padding: 20px;
+  margin-top: 50px;
+  background-color:whitesmoke;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: none;
+  border: 2px solid rgb(37, 16, 55);
+
+}
+#otpDiv{
+  margin: auto;
+  width: 30%;
+  background-color: whitesmoke;
+  padding: 5%;
+  text-align: center;
+}
+#butt{
+  margin-left: 30%;
+  margin-top: 10px;
+  display: flex;
+  gap: 40px;
+ }
+ #butt button{
+  padding: 5px;
+ }
+ #otpDiv > p{
+  font-size: 20px;
+  }
+  #recipte2 button {
+    padding: 10px 20px;
+    background-color: #222;
+    border: none;
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+    border-radius: 5px;
+  }
+  #recipte2 button:hover {
+    cursor: pointer;
+    background-color:red;
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+    border-radius: 5px;
+  }
+  #recipte2 img {
+    width: 60%;
+    border-radius: 50%;
+  
+  }
+  #recipte2 p {
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode',
+        'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  #welcome2,#disprice{
+    color: red;
+    font-size: 20px;
+  }
+  #recipte2 p{
+    text-align: start;
+  }

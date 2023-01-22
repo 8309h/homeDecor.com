@@ -2,24 +2,34 @@ let container = document.getElementById("card-container");
 
 let displaywishcount = document.getElementById("wishcount");
 
-let cartData = JSON.parse(localStorage.getItem("wishlist")) || [];
+
+let logeduser = JSON.parse(localStorage.getItem("loggedUser")) || [];
+    console.log(logeduser)
+    document.querySelector("#welcome").textContent = logeduser.name;
+
+let wishListData  = JSON.parse(localStorage.getItem("wishlist")) || [];
+let cart  = JSON.parse(localStorage.getItem("Addtocart")) || [];
+
+// let wishlistcount = wishListData.length
+// console.log(wishlistcount)
+// localStorage.setItem("wishlistcount",wishlistcount)
 
 
-// console.log(cartData.length);
-displayProducts(cartData);
+
+
+
+
 
 function displayProducts(data) {
     
     displaywishcount.innerHTML = data.length;
+    localStorage.setItem("wishlistcount",displaywishcount)
+
     // console.log(data.length)
 
-    let logeduser = JSON.parse(localStorage.getItem("loggedUser")) || [];
-    console.log(logeduser)
-    document.querySelector("#welcome").textContent = logeduser.name;
+      container.innerHTML = null;
 
-    container.innerHTML = null;
-
-    let myData = data.forEach((element, index) => {
+     data.forEach((element, index) => {
 
         let card = document.createElement("div");
 
@@ -37,38 +47,38 @@ function displayProducts(data) {
 
         let addtocart = document.createElement("button");
         addtocart.innerText = "ADD TO CART"
-        // addtocart.style.marginLeft=""
+      
 
         addtocart.addEventListener("click", function () {
 
-            let cartData = JSON.parse(localStorage.getItem("Add To Cart")) || [];
+            let cart  = JSON.parse(localStorage.getItem("Addtocart")) || [];
 
-            let isAdleadyInCart = false;
-            for (let i = 0; i < cartData.length; i++) {
-                if (cartData[i].ProductId === element.ProductId) {
-                    isAdleadyInCart = true;
+            let datapresent = false;
+            for (let i = 0; i < cart.length; i++) {
+
+                if (cart[i].ProductId == element.ProductId) {
+                    datapresent = true;
                     break;
-                };
+                }
             }
 
-            if (isAdleadyInCart === true) {
-                alert("Product Already in Cart");
+            console.log(datapresent)
+            if (datapresent == true) {
+                alert("Product Already in Cart❌");
 
             } else {
-                cartData.push({ ...element, quantity: 1 });
-                localStorage.setItem("Add To Cart", JSON.stringify(cartData));
-                alert("Product Added To Cart");
-                remove();
+                cart.push({ ...element, quantity: 1 });
+                localStorage.setItem("Addtocart", JSON.stringify(cart));
+                alert("Product Added To Cart ✔");
+                remove()
 
-                // displayProducts(data);
             }
-
         })
 
         let removeProduct = document.createElement("i");
-        // removeProduct.innerText = "X";
+       
         removeProduct.setAttribute("id", "heartss")
-        // <FontAwesomeIcon icon="fa-thin fa-xmark-large" />
+       
         removeProduct.setAttribute("class", "fa fa-minus-circle")
         function remove() {
             event.target.parentNode.remove();
@@ -77,8 +87,8 @@ function displayProducts(data) {
             displayProducts(data);
         }
 
-        removeProduct.addEventListener("click", () => {
-            remove();
+       removeProduct.addEventListener("click", () => {
+           remove();
         });
 
         card.append(image, name, price, desc, addtocart, removeProduct);
@@ -86,7 +96,8 @@ function displayProducts(data) {
         container.append(card);
     });
 
-    // console.log(myData)
+  
 }
+displayProducts(wishListData);
 
 

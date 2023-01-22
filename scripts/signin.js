@@ -26,7 +26,7 @@ function myfun(event) {
 
         if (flag_email == "yes" && pass == password) {
 
-            location.href = "index.html";
+            location.href = "payment.html";
             form.reload();
         } else {
             alert("Invalid Email or Password ")

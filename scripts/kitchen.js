@@ -1,10 +1,14 @@
 
 
 // KITCHEN DATA
+let logeduser = JSON.parse(localStorage.getItem("loggedUser")) || [];
+console.log(logeduser)
+document.querySelector("#welcome").textContent = logeduser.name;
+
+let  wishListData = localStorage.getItem("wishlist") || [];
+let cart  = JSON.parse(localStorage.getItem("Addtocart")) || [];
 
 
-let wishListData=[]
-let ADDtoCartData=[]
 
 let kitchenData=[
 
@@ -435,61 +439,162 @@ let kitchenData=[
 ]
 
 
-let kData=document.querySelector(".kitchen-container")
 
 
-
+let kitchen = document.querySelector(".kitchen-container")
 
 localStorage.setItem("kitchen", JSON.stringify(kitchenData))
 
 
+function displayData(data) {
+    kitchen.innerHTML = ""
+    data.forEach(function (el) {
 
-function displayData(data){
-    data.forEach(function(el){
+        let div = document.createElement("div")
 
-        let div=document.createElement("div")
-        let image=document.createElement("img")
-        image.setAttribute("src",el.Image)
-        let name=document.createElement("h3")
-        name.textContent=el.Name;
-        let price=document.createElement("h5")
-        price.textContent=el.Price
-        let desc=document.createElement("p")
-        desc.textContent=el.Description
- 
+        let image = document.createElement("img")
+        image.setAttribute("src", el.Image)
 
+        let names = document.createElement("h3")
+        names.textContent = el.Name;
 
-        let buynow=document.createElement("button")
-        buynow.textContent="Add To Cart"
-        buynow.style.marginLeft=""
+        let price = document.createElement("h5")
+        price.textContent = "₹ " + el.Price
 
-        buynow.addEventListener("click",function(){
+        let desc = document.createElement("p")
+        desc.textContent = el.Description
 
-            let temp=el
-            ADDtoCartData.push(temp)
-            localStorage.setItem("Add To Cart",JSON.stringify(ADDtoCartData))
-        })
-      
+        let buynow = document.createElement("button")
+        buynow.textContent = "Add To Cart"
+    
+
+        buynow.addEventListener("click", function () {
 
             
+            let cart = JSON.parse(localStorage.getItem("Addtocart")) ;
 
-        //     localStorage.setItem("wishlist",JSON.stringify(wishListData))
-        // })
+            let datapresent = false;
+            for (let i = 0; i < cart.length; i++) {
 
+                if (cart[i].ProductId == el.ProductId) {
+                    datapresent = true;
+                    break;
+                }
+            }
+
+            console.log(datapresent)
+            if (datapresent == true) {
+                alert("Product Already in Cart❌");
+
+            } else {
+                cart.push({ ...el, quantity: 1 });
+                localStorage.setItem("Addtocart", JSON.stringify(cart));
+                alert("Product Added To Cart ✔");
+
+            }
+        })
+
+              
         let but=document.createElement("i")
         but.setAttribute("id","heartss")
-       // but.textContent="♡"
-      but.setAttribute("class","fa fa-heart")
+        but.setAttribute("class","fa fa-heart")
 
-        div.append(image,name,price,desc,buynow,but)
+        but.addEventListener("click",function(){
 
-        //APPENDING PROTION  REMAINING
+            let wishListData = JSON.parse(localStorage.getItem("wishlist")) ;
 
-        kData.append(div)
+            let datapresent = false;
+            for (let i = 0; i <  wishListData.length; i++) {
+
+                if ( wishListData[i].ProductId == el.ProductId) {
+                    datapresent = true;
+                    break;
+                }
+            }
+
+            console.log(datapresent)
+            if (datapresent == true) {
+                alert("Product Already in wishlist ❌");
+
+            } else {
+                wishListData.push({ ...el, quantity: 1 });
+                localStorage.setItem("wishlist", JSON.stringify(wishListData));
+                alert("Product Added To Wishlist ✔");
+
+            }
+
+      })
+      
+        div.append(image,names,price,desc,buynow,but)
+
+        kitchen.append(div);
+
+
     })
 }
+displayData(kitchenData)
 
-displayData(kitchenData);
+function search() {
+    let q = document.querySelector("input").value;
+   
+    let newData = kitchenData.filter(function (el) {
+        return el.Name.toLowerCase().includes(q.toLowerCase());
+    });
 
+    console.log(newData)
+    displayData(newData);
+}
+let prio = document.querySelector("#filter");
+
+prio.addEventListener("change", function (event) {
+    event.preventDefault();
+
+    let selected = event.target.value;
+
+    if (selected == "all") {
+        displayData(kitchenData)
+       
+    } else {
+
+        let filtered_data = kitchenData.filter(function (el) {
+            return el.Category == selected
+        });
+        displayData(filtered_data)
+      
+    }
+
+});
+
+let sorted = document.querySelector("#sort");
+
+sorted.addEventListener("change", function (event) {
+
+    let val = document.querySelector("#sort").value;
+    //console.log(val)
+
+    if (val == "LTH") {
+        let data1 = kitchenData.sort(function (a, b) {
+            return a.Price - b.Price;
+
+        })
+       
+        displayData(data1)
+        
+        
+
+
+    } else if (val == "HTL") {
+        let sorteddata = kitchenData.sort(function (a, b) {
+            return b.Price - a.Price;
+
+        })
+        displayData(sorteddata)
+       
+    } else {
+        displayData(kitchenData)
+     
+        
+    }
+})
 
 

@@ -4,30 +4,20 @@
 
 
 let furnitureData = document.querySelector(".furniture-container")
+let furnitureData2 = document.querySelector(".furniture-container2")
+
+let logeduser = JSON.parse(localStorage.getItem("loggedUser")) || [];
+console.log(logeduser)
+document.querySelector("#welcome").textContent = logeduser.name;
 
 
-let bag = JSON.parse(localStorage.getItem("Addtocart"))
-let data = []
-data = bag
-
-function abcd() {
-    let serch = document.getElementById("search").value;
 
 
-    let newData = data.filter(function (elem) {
-        return elem.Name.toLowerCase().includes(serch.toLowerCase());
-
-    })
-    console.log(newData)
-    displayData(newData)
-}
+let displaywishcount = document.getElementById("wishcount");
 
 
-// FURNITURE DATA 
 
 
-let wishListData = []
-let ADDtoCartData = []
 let furniture = [
     //     {
     //         "ProductId":1,
@@ -550,7 +540,10 @@ let furniture = [
 
 ]
 
-localStorage.setItem("furniture", JSON.stringify(furniture))
+let  wishListData = localStorage.getItem("wishlist") || [];
+let cart  = JSON.parse(localStorage.getItem("Addtocart")) || [];
+
+
 
 
 function displayData(data) {
@@ -558,94 +551,257 @@ function displayData(data) {
     data.forEach(function (el) {
 
         let div = document.createElement("div")
+
         let image = document.createElement("img")
         image.setAttribute("src", el.Image)
+
         let names = document.createElement("h3")
         names.textContent = el.Name;
+
         let price = document.createElement("h5")
         price.textContent = "₹ " + el.Price
+
         let desc = document.createElement("p")
         desc.textContent = el.Description
 
         let buynow = document.createElement("button")
         buynow.textContent = "Add To Cart"
-        buynow.style.marginLeft = ""
+    
 
         buynow.addEventListener("click", function () {
 
-            let temp = el
-            ADDtoCartData.push(temp)
-            localStorage.setItem("Add To Cart", JSON.stringify(ADDtoCartData))
+            
+            let cart = JSON.parse(localStorage.getItem("Addtocart")) ;
+
+            let datapresent = false;
+            for (let i = 0; i < cart.length; i++) {
+
+                if (cart[i].ProductId == el.ProductId) {
+                    datapresent = true;
+                    break;
+                }
+            }
+
+            console.log(datapresent)
+            if (datapresent == true) {
+                alert("Product Already in Cart❌");
+
+            } else {
+                cart.push({ ...el, quantity: 1 });
+                localStorage.setItem("Addtocart", JSON.stringify(cart));
+                alert("Product Added To Cart ✔");
+
+            }
         })
 
               
         let but=document.createElement("i")
         but.setAttribute("id","heartss")
-       // but.textContent="♡"
-      but.setAttribute("class","fa fa-heart")
+        but.setAttribute("class","fa fa-heart")
 
-      but.addEventListener("click",function(){
-        let temp=el
-        wishListData.push(temp)
-        localStorage.setItem("wishlist",JSON.stringify(wishListData))
+        but.addEventListener("click",function(){
+       
+
+        let wishListData = JSON.parse(localStorage.getItem("wishlist")) ;
+
+            let datapresent = false;
+            for (let i = 0; i <  wishListData.length; i++) {
+
+                if ( wishListData[i].ProductId == el.ProductId) {
+                    datapresent = true;
+                    break;
+                }
+            }
+
+            console.log(datapresent)
+            if (datapresent == true) {
+                alert("Product Already in wishlist ❌");
+
+            } else {
+                wishListData.push({ ...el, quantity: 1 });
+                localStorage.setItem("wishlist", JSON.stringify(wishListData));
+                alert("Product Added To Wishlist ✔");
+
+            }
 
       })
       
-          div.append(image,names,price,desc,buynow,but)
+        div.append(image,names,price,desc,buynow,but)
 
         furnitureData.append(div);
 
 
     })
 }
+displayData(furniture)
 
 
-displayData(furniture);
+function search() {
+    let q = document.querySelector("input").value;
+   
+    let newData = furniture.filter(function (el) {
+        return el.Name.toLowerCase().includes(q.toLowerCase());
+    });
+
+   // console.log(newData)
+    displayData(newData);
+}
+
 
 let productsArr = JSON.parse(localStorage.getItem("addproducts")) || [];
 display(productsArr);
 
 function display(data) {
 
+    furnitureData2.innerHTML = ""
+
     data.forEach(function (el) {
 
         let div = document.createElement("div")
+
         let image = document.createElement("img")
         image.setAttribute("src", el.Image)
+
         let names = document.createElement("h3")
         names.textContent = el.Name;
+
         let price = document.createElement("h5")
         price.textContent = "₹ " + el.Price
+
         let desc = document.createElement("p")
         desc.textContent = el.Description
 
         let buynow = document.createElement("button")
         buynow.textContent = "Add To Cart"
-        buynow.style.marginLeft = ""
+    
 
         buynow.addEventListener("click", function () {
 
-            let temp = el
-            ADDtoCartData.push(temp)
-            localStorage.setItem("Add To Cart", JSON.stringify(ADDtoCartData))
-            alert("Product added to cart ")
+            
+            let cart = JSON.parse(localStorage.getItem("Addtocart")) ;
+
+            let datapresent = false;
+            for (let i = 0; i < cart.length; i++) {
+
+                if (cart[i].ProductId == el.ProductId) {
+                    datapresent = true;
+                    break;
+                }
+            }
+
+            console.log(datapresent)
+            if (datapresent == true) {
+                alert("Product Already in Cart ❌");
+
+            } else {
+                cart.push({ ...el,quantity: 1 });
+                localStorage.setItem("Addtocart", JSON.stringify(cart));
+                alert("Product Added To Cart ✔");
+
+            }
         })
 
-        let but = document.createElement("i")
-        but.setAttribute("id", "heartss")
-        // but.textContent="♡"
-        but.setAttribute("class", "fa fa-heart")
+              
+        let but=document.createElement("i")
+        but.setAttribute("id","heartss")
+        but.setAttribute("class","fa fa-heart")
 
-        but.addEventListener("click", function () {
-            let temp = el
-            wishListData.push(temp)
-            localStorage.setItem("wishlist", JSON.stringify(wishListData))
+        but.addEventListener("click",function(){
+       
 
-        })
+         let  wishListData = JSON.parse(localStorage.getItem("wishlist")) ;
 
-        div.append(image, names, price, desc, buynow, but)
+            let datapresent = false;
+            for (let i = 0; i <  wishListData.length; i++) {
 
-        furnitureData.append(div);
+                if ( wishListData[i].ProductId == el.ProductId) {
+                    datapresent = true;
+                    break;
+                }
+            }
+
+            console.log(datapresent)
+            if (datapresent == true) {
+                alert("Product Already in wishlist❌");
+
+            } else {
+                wishListData.push({ ...el, quantity: 1 });
+                localStorage.setItem("wishlist", JSON.stringify(wishListData));
+                alert("Product Added To Wishlist ✔");
+
+            }
+
+      })
+      
+        div.append(image,names,price,desc,buynow,but)
+
+        furnitureData2.append(div);
+
 
     })
 }
+let prio = document.querySelector("#filter");
+
+prio.addEventListener("change", function (event) {
+    event.preventDefault();
+
+    let selected = event.target.value;
+
+    if (selected == "all") {
+        displayData(furniture)
+        display(productsArr)
+    } else {
+
+        let filtered_data = furniture.filter(function (el) {
+            return el.Category == selected
+        });
+        displayData(filtered_data)
+        display(filtered_data)
+    }
+
+});
+
+let sorted = document.querySelector("#sort");
+
+sorted.addEventListener("change", function (event) {
+
+    let val = document.querySelector("#sort").value;
+    //console.log(val)
+
+    if (val == "LTH") {
+        let data1 = furniture.sort(function (a, b) {
+            return a.Price - b.Price;
+
+        })
+        let data2 = productsArr.sort(function (a, b) {
+            return a.Price - b.Price;
+
+        })
+        displayData(data1)
+        display(data2)
+        
+
+
+    } else if (val == "HTL") {
+        let sorteddata = furniture.sort(function (a, b) {
+            return b.Price - a.Price;
+
+        })
+        displayData(sorteddata)
+        let sorteddata2 = productsArr.sort(function (a, b) {
+            return b.Price - a.Price;
+
+        })
+        display(sorteddata2)
+       
+
+
+
+    } else {
+        displayData(furniture)
+        display(productsArr)
+        
+    }
+})
+
+
