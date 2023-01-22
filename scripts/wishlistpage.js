@@ -10,16 +10,6 @@ let logeduser = JSON.parse(localStorage.getItem("loggedUser")) || [];
 let wishListData  = JSON.parse(localStorage.getItem("wishlist")) || [];
 let cart  = JSON.parse(localStorage.getItem("Addtocart")) || [];
 
-// let wishlistcount = wishListData.length
-// console.log(wishlistcount)
-// localStorage.setItem("wishlistcount",wishlistcount)
-
-
-
-
-
-
-
 function displayProducts(data) {
     
     displaywishcount.innerHTML = data.length;

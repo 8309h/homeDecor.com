@@ -471,7 +471,7 @@ function displayData(data) {
         buynow.addEventListener("click", function () {
 
             
-            let cart = JSON.parse(localStorage.getItem("Addtocart")) ;
+            let cart = JSON.parse(localStorage.getItem("Addtocart")) || [];
 
             let datapresent = false;
             for (let i = 0; i < cart.length; i++) {
@@ -501,7 +501,7 @@ function displayData(data) {
 
         but.addEventListener("click",function(){
 
-            let wishListData = JSON.parse(localStorage.getItem("wishlist")) ;
+            let wishListData = JSON.parse(localStorage.getItem("wishlist")) || [];
 
             let datapresent = false;
             for (let i = 0; i <  wishListData.length; i++) {
