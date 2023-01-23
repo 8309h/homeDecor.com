@@ -15,7 +15,8 @@ document.querySelector("#otpNum").textContent = logeduser.phoneno;
 otpform.style.display = "block"
 
 let res_otp = otp();
-    alert("OTP Sent to Your Number : " +res_otp)
+    alert("OTP Sent to your Mobile")
+    alert("Your OTP is : " +res_otp)
 function otpfun (){
     let add1=document.getElementById("otp1").value;
     let add2=document.getElementById("otp2").value;
